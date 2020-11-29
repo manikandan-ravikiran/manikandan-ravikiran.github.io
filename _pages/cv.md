@@ -122,6 +122,7 @@ Care Plan - 2015
 
 Service and leadership
 ======
+* 2021 Program Committee, First Workshop On Language Technology For Equality, Diversity, Inclusion (Lt-Edi-2021) @ EACL 2021 - Kyiv, Ukraine
 * 2021 Program Committee, First Workshop on Speech and Language Technologies for Dravidian Languages @ EACL 2021 - Kyiv, Ukraine
 * 2021 Program Committee, NAACL 2021 - Mexico City
 * 2020 Program Committee, AACL-IJCNLP 2020 - Suzhou, China
