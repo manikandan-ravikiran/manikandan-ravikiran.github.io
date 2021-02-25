@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-* <b> Manikandan Ravikiran </b>, Subbiah Annamalai <a href="" style="text-decoration: none;"> DOSA: Dravidian Code-Mixed Offensive Span Identification Dataset </a>. In Proceedings of the The First Workshop on Speech and Language Technologies for Dravidian Languages, EACL (2021)
+* <b> Manikandan Ravikiran </b>, Subbiah Annamalai <a href="https://manikandan-ravikiran.github.io/files/eacl_dosa.pdf" style="text-decoration: none;"> DOSA: Dravidian Code-Mixed Offensive Span Identification Dataset </a>. In Proceedings of the The First Workshop on Speech and Language Technologies for Dravidian Languages, EACL (2021)
 
 * <b> Manikandan Ravikiran </b>, Yuichi Nonaka, Nestor Mariyasagayam. <a href="" style="text-decoration: none;"> A Sensitivity Analysis of DeepSORT for Low Frame Rate Video </a>. Special Session on Machine Learning for Big Data, IEEE International Conference on Big Data (2020).
 
