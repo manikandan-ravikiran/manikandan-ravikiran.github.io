@@ -16,13 +16,16 @@ Work experience
 ======
 * 2021 - Current: Senior Research Engineer
   * R&D Center, AI Research Group, Hitachi India Pvt. Ltd
+  * Computer Vision & Natural Language Processing
    
 * 2018 - 2020: Research Engineer
   * R&D Center, Digital Solutions Research Group, Hitachi India Pvt. Ltd
   * Computer Vision & Natural Language Processing
-    * Investigation of Temporal Ensembling in Context of Intraclass variance.
-    * Developed unified framework for multiple vision tasks through instance based learning and offensive language identification through language modeling.
-    * <b> Unified Framework </b>: Designed instance based learning approach for simultaneous Pedestrian Attribute Recognition and Re-Identification.
+    * <b> Less data modeling</b>
+      * Investigation of Temporal Ensembling in Context of Intraclass variance.
+    * <b> Unified Framework </b>
+      * Developed unified framework for multiple vision tasks through instance based learning and offensive language identification through language modeling.
+      * Designed instance based learning approach for simultaneous Pedestrian Attribute Recognition and Re-Identification.
     * <b> Offensive Language Identification </b>:Developed Sampling approach for noisy training transformer Language models. 
 
 * 2016 - 2018: Research Engineer
@@ -112,8 +115,8 @@ approaches solve 3x3 Raven’s Progressive Matrices </a>, Working Paper, 2019
 
 Patents
 ======
-* <b>Shibashish Sen</b>,Manikandan R, Yuichi Nonaka and Nestor Mariyasagayam - System and method to generate gating sequences for training model on multidomain datasets  - 2021
-* <b>Manikandan R</b>, Yuichi Nonaka and Nestor Mariyasagayam - System and method for generating filter sequences to Train Model on Completely Noisy Dataset  - 2021
+* Shibashish Sen, <b>Manikandan R</b>, Yuichi Nonaka and Nestor Mariyasagayam - System and method to generate gating sequences for training model on multidomain datasets  - 2021
+* <b>Manikandan R</b>, Yuichi Nonaka and Nestor Mariyasagayam - System and method for generating filter sequences to Train Model on Completely Noisy Dataset - 2021
 * <b>Manikandan R</b> and Shibashish Sen - System and Method to train neural network with Heterogenous Distillation - 2020
 * <b>Manikandan R</b> and Shibashish Sen - System and Method to train to Object Recognition Network with less data - 2019
 * <b>Manikandan R</b> - Method and System for generating an Optimal Object Recognition Network (OORN) with
