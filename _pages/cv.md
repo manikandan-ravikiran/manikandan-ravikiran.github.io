@@ -14,20 +14,19 @@ Education
 
 Work experience
 ======
-* 2020 - Current: Senior Research Engineer
-  * R&D Center, Hitachi India Pvt. Ltd
-  * Computer Vision 
-    * Investigation of Temporal Ensembling in Context of Intraclass variance.
+* 2021 - Current: Senior Research Engineer
+  * R&D Center, AI Research Group, Hitachi India Pvt. Ltd
    
 * 2018 - 2020: Research Engineer
-  * R&D Center, Hitachi India Pvt. Ltd
+  * R&D Center, Digital Solutions Research Group, Hitachi India Pvt. Ltd
   * Computer Vision & Natural Language Processing
+    * Investigation of Temporal Ensembling in Context of Intraclass variance.
     * Developed unified framework for multiple vision tasks through instance based learning and offensive language identification through language modeling.
     * <b> Unified Framework </b>: Designed instance based learning approach for simultaneous Pedestrian Attribute Recognition and Re-Identification.
     * <b> Offensive Language Identification </b>:Developed Sampling approach for noisy training transformer Language models. 
 
 * 2016 - 2018: Research Engineer
-  * R&D Center, Hitachi India Pvt. Ltd
+  * R&D Center, Digital Solutions Research Group, Hitachi India Pvt. Ltd
   * Computer Vision
     * Developed vision AI for mass visual surveillance with research involving deep compression, activity recognition, improved SSD.
     * <b> Deep compression </b>: Designed theoretical formulation for filter importance criterion via structural filter statistics.
@@ -38,7 +37,7 @@ Work experience
     * <a href="https://www.reuters.com/video/2017/04/10/hitachi-reveals-ai-security-software?videoId=371461744" style="text-decoration: none;"> https://www.reuters.com/video/2017/04/10/hitachi-reveals-ai-security-software?videoId=371461744 </a>
   
 * 2015 - 2016 : Junior Research Engineer
-  * R&D Center, Hitachi India Pvt. Ltd
+  * R&D Center, IT Solution Research Group, Hitachi India Pvt. Ltd
   * Natural Language Processing
     * Developed Natural Language Processing system for medical texts with research involving Numerical Attribute Extraction, Temporal Information Extraction, Narrative Container Relation extraction.
     * <b>Numerical Attribute Extraction </b>: Developed extracting named entities from clinical texts using CRF and SVM.
@@ -46,7 +45,7 @@ Work experience
     * <a href="http://www.hitachi.com/New/cnews/month/2017/12/171212.pdf" style="text-decoration: none;"> http://www.hitachi.com/New/cnews/month/2017/12/171212.pdf</a>
           
 * 2015 : Intern Research Engineer
-  * R&D Center, Hitachi India Pvt. Ltd
+  * R&D Center, IT Solution Research Group, Hitachi India Pvt. Ltd
   * Natural Language Processing
     * Acronym Sense Disambiguation from Medical Texts
     * Developed a acronym sense disambiguation system for clinical texts using structured sequence modeling involving CRF.
@@ -113,6 +112,8 @@ approaches solve 3x3 Raven’s Progressive Matrices </a>, Working Paper, 2019
 
 Patents
 ======
+* <b>Shibashish Sen</b>,Manikandan R, Yuichi Nonaka and Nestor Mariyasagayam - System and method to generate gating sequences for training model on multidomain datasets  - 2021
+* <b>Manikandan R</b>, Yuichi Nonaka and Nestor Mariyasagayam - System and method for generating filter sequences to Train Model on Completely Noisy Dataset  - 2021
 * <b>Manikandan R</b> and Shibashish Sen - System and Method to train neural network with Heterogenous Distillation - 2020
 * <b>Manikandan R</b> and Shibashish Sen - System and Method to train to Object Recognition Network with less data - 2019
 * <b>Manikandan R</b> - Method and System for generating an Optimal Object Recognition Network (OORN) with
