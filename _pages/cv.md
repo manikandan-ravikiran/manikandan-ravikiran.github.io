@@ -128,6 +128,7 @@ Care Plan - 2015
 
 Service and leadership
 ======
+* 2021 Reviewer, ACM Transactions on Asian and Low-Resource Language Information Processing
 * 2021 Reviewer, Computer Speech and Language - Journal - Elsevier
 * 2021 Program Committee, EMNLP 2021 - Punta Cana, Dominican Republic
 * 2021 Program Committee, ACL-IJCNLP 2021 - Bangkok, Thailand
