@@ -16,7 +16,9 @@ Work experience
 ======
 * 2021 - Current: Senior Research Engineer
   * R&D Center, AI Research Group, Hitachi India Pvt. Ltd
-  * Computer Vision & Natural Language Processing
+  * Computer Vision
+    * <b> Less data modeling</b>
+      * Investigation of Temporal Ensembling in Context of Intraclass variance.
    
 * 2018 - 2020: Research Engineer
   * R&D Center, Digital Solutions Research Group, Hitachi India Pvt. Ltd
