@@ -130,9 +130,11 @@ Care Plan - 2015
 
 Service and leadership
 ======
+* 2021 Program Committee, FIRE 2021 - Forum for Information Retrieval Evaluation, India (Online Event)
+* 2021 Reviewer, Spring Language Resources and Evaluation Journal
 * 2021 Reviewer, Springer Nature Computer Science Journal
 * 2021 Reviewer, ACM Transactions on Asian and Low-Resource Language Information Processing
-* 2021 Reviewer, Computer Speech and Language Journal - Elsevier
+* 2021 Reviewer, Elsevier Computer Speech and Language Journal 
 * 2021 Program Committee, EMNLP 2021 - Punta Cana, Dominican Republic
 * 2021 Program Committee, ACL-IJCNLP 2021 - Bangkok, Thailand
 * 2021 Program Committee, First Workshop On Language Technology For Equality, Diversity, Inclusion (Lt-Edi-2021) EACL 2021 - Kyiv, Ukraine
