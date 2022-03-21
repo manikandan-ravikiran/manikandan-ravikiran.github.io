@@ -4,6 +4,14 @@ title: "Publications"
 permalink: /publications/
 author_profile: true
 ---
+
+*  <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi <a href="" style="text-decoration: none;">Zero-shot Code-Mixed Offensive Span Identification through Rationale
+Extraction</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (Under Review)
+
+* Hariharan R L, Anand Kumar Madasamy, <b> Manikandan Ravikiran </b>. <a href="" style="text-decoration: none;">NIT-IT_NLP@TamilNLP-ACL2022: Transformer based model for Toxic span Identification in Tamil</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
+
+* <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi, Anand Kumar Madasamy, Sangeetha Sivanesan, Ratnavel Rajalakshmi, Sajeetha Thavareesa. <a href="" style="text-decoration: none;">Findings of the Shared Task on Offensive Span Identification in Code-Mixed Tamil-English Comments</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
+
 * <b> Manikandan Ravikiran </b>, Siddarth Vohra, Yuichi Nonaka, Sharath Kumar, Shibashish Sen, Nestor Mariyasagayam, Kingshuk Banerjee <a href="" style="text-decoration: none;"> You Reap What You Sow: Revisitng Intra-Class Variations and Seed Selection in the Context of Temporal Ensembling</a>. In Proceedings of the 2nd International Conference on Frontiers in Computing and Systems (COMSYS-2021).
 
 * <b> Manikandan Ravikiran </b>, Subbiah Annamalai <a href="https://www.aclweb.org/anthology/2021.dravidianlangtech-1.2.pdf" style="text-decoration: none;"> DOSA: Dravidian Code-Mixed Offensive Span Identification Dataset </a>. In Proceedings of the The First Workshop on Speech and Language Technologies for Dravidian Languages, EACL (2021)
