@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 *  <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi <a href="" style="text-decoration: none;">Zero-shot Code-Mixed Offensive Span Identification through Rationale
-Extraction</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (Under Review)
+Extraction</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
 * Hariharan R L, Anand Kumar Madasamy, <b> Manikandan Ravikiran </b>. <a href="" style="text-decoration: none;">NIT-IT_NLP@TamilNLP-ACL2022: Transformer based model for Toxic span Identification in Tamil</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
