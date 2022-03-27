@@ -64,12 +64,12 @@ Skills
 Publications
 ======
 
-*  Manikandan Ravikiran, Bharathi Raja Chakravarthi <a href="" style="text-decoration: none;">Zero-shot Code-Mixed Offensive Span Identification through Rationale
-Extraction</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (Under Review)
+*  <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi <a href="" style="text-decoration: none;">Zero-shot Code-Mixed Offensive Span Identification through Rationale
+Extraction</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
-* Hariharan R L, Anand Kumar Madasamy, Manikandan Ravikiran. <a href="" style="text-decoration: none;">NIT-IT_NLP@TamilNLP-ACL2022: Transformer based model for Toxic span Identification in Tamil</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
+* Hariharan R L, Anand Kumar Madasamy, <b> Manikandan Ravikiran </b>. <a href="" style="text-decoration: none;">NIT-IT_NLP@TamilNLP-ACL2022: Transformer based model for Toxic span Identification in Tamil</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
-* Manikandan Ravikiran, Bharathi Raja Chakravarthi, Anand Kumar Madasamy, Sangeetha Sivanesan, Ratnavel Rajalakshmi, Sajeetha Thavareesa. <a href="" style="text-decoration: none;">Findings of the Shared Task on Offensive Span Identification in Code-Mixed Tamil-English Comments</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
+* <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi, Anand Kumar Madasamy, Sangeetha Sivanesan, Ratnavel Rajalakshmi, Sajeetha Thavareesa. <a href="" style="text-decoration: none;">Findings of the Shared Task on Offensive Span Identification in Code-Mixed Tamil-English Comments</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
 * <b> Manikandan Ravikiran </b>, Siddarth Vohra, Yuichi Nonaka, Sharath Kumar, Shibashish Sen, Nestor Mariyasagayam, Kingshuk Banerjee <a href="" style="text-decoration: none;"> You Reap What You Sow: Revisitng Intra-Class Variations and Seed Selection in the Context of Temporal Ensembling</a>. In Proceedings of the 2nd International Conference on Frontiers in Computing and Systems (COMSYS-2021).
 
@@ -140,7 +140,9 @@ Care Plan - 2015
 
 Service and leadership
 ======
-* 2021 Program Committee, FIRE 2021 - Forum for Information Retrieval Evaluation, India (Online Event)
+* 2022 Program Committee, IEEE International Conference on Data and Decision Sciences, 2022
+* 2022 Program Committee, The Second Workshop on Speech and Language Technologies for Dravidian Languages @ ACL 2022
+* 2021 Program Committee, FIRE 2021 - Forum for Information Retrieval Evaluation, India 
 * 2021 Reviewer, Spring Language Resources and Evaluation Journal
 * 2021 Reviewer, Springer Nature Computer Science Journal
 * 2021 Reviewer, ACM Transactions on Asian and Low-Resource Language Information Processing
