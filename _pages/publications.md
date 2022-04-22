@@ -5,6 +5,8 @@ permalink: /publications/
 author_profile: true
 ---
 
+* 	Hariharan RamakrishnaIyer LekshmiAmmal, <b> Manikandan Ravikiran </b>, Gayathri Nisha, Navyasree Balamuralidhar, Adithya Madhusoodanan, Anand Kumar Madasamy, Bharathi Raja Chakravarthi: Overlapping Word Removal is All You Need: Revisiting Data Imbalance in Hope Speech Detection. CoRR abs/2204.05488 (2022)
+
 *  <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi <a href="" style="text-decoration: none;">Zero-shot Code-Mixed Offensive Span Identification through Rationale
 Extraction</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
