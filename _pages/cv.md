@@ -63,17 +63,18 @@ Skills
 
 Publications
 ======
-* 	Hariharan RamakrishnaIyer LekshmiAmmal, <b> Manikandan Ravikiran </b>, Gayathri Nisha, Navyasree Balamuralidhar, Adithya Madhusoodanan, Anand Kumar Madasamy, Bharathi Raja Chakravarthi: Overlapping Word Removal is All You Need: Revisiting Data Imbalance in Hope Speech Detection. CoRR abs/2204.05488 (2022)
+*  <b> Manikandan Ravikiran </b> , Bharathi Raja Chakravarthi, <a href="https://manikandan-ravikiran.github.io/files/errors_span.pdf" style="text-decoration: none;"> On the Errors in Code-Mixed Tamil-English Offensive Span Identification </a>. Proceedings of the The 6th Workshop on Online Abuse and Harms (2022). Annual Conference of the North American Chapter of the Association for Computational Linguistics, 2022. (To Appear)
 
-*  <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi <a href="" style="text-decoration: none;">Zero-shot Code-Mixed Offensive Span Identification through Rationale
+* 	Hariharan RamakrishnaIyer LekshmiAmmal, <b> Manikandan Ravikiran </b>, Gayathri Nisha, Navyasree Balamuralidhar, Adithya Madhusoodanan, Anand Kumar Madasamy, Bharathi Raja Chakravarthi: <a href="https://arxiv.org/abs/2204.05488" style="text-decoration: none;"> Overlapping Word Removal is All You Need: Revisiting Data Imbalance in Hope Speech Detection </a>. CoRR abs/2204.05488 (2022)
+
+*  <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi <a href="https://manikandan-ravikiran.github.io/files/zeroshot.pdf" style="text-decoration: none;">Zero-shot Code-Mixed Offensive Span Identification through Rationale
 Extraction</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
-* Hariharan R L, Anand Kumar Madasamy, <b> Manikandan Ravikiran </b>. <a href="" style="text-decoration: none;">NIT-IT_NLP@TamilNLP-ACL2022: Transformer based model for Toxic span Identification in Tamil</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
+* Hariharan R L, Anand Kumar Madasamy, <b> Manikandan Ravikiran </b>. <a href="https://manikandan-ravikiran.github.io/files/nitk.pdf" style="text-decoration: none;">NIT-IT_NLP@TamilNLP-ACL2022: Transformer based model for Toxic span Identification in Tamil</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
-* <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi, Anand Kumar Madasamy, Sangeetha Sivanesan, Ratnavel Rajalakshmi, Sajeetha Thavareesa. <a href="" style="text-decoration: none;">Findings of the Shared Task on Offensive Span Identification in Code-Mixed Tamil-English Comments</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
+* <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi, Anand Kumar Madasamy, Sangeetha Sivanesan, Ratnavel Rajalakshmi, Sajeetha Thavareesa. <a href="https://manikandan-ravikiran.github.io/files/findings.pdf" style="text-decoration: none;">Findings of the Shared Task on Offensive Span Identification in Code-Mixed Tamil-English Comments</a>. Proceedings of the Second Workshop on Speech and Language Technologies for Dravidian Languages. Association for Computational Linguistics, 2022. (To Appear)
 
 * <b> Manikandan Ravikiran </b>, Siddarth Vohra, Yuichi Nonaka, Sharath Kumar, Shibashish Sen, Nestor Mariyasagayam, Kingshuk Banerjee <a href="" style="text-decoration: none;"> You Reap What You Sow: Revisitng Intra-Class Variations and Seed Selection in the Context of Temporal Ensembling</a>. In Proceedings of the 2nd International Conference on Frontiers in Computing and Systems (COMSYS-2021).
-
 
 * <b> Manikandan Ravikiran </b>, Subbiah Annamalai <a href="https://www.aclweb.org/anthology/2021.dravidianlangtech-1.2.pdf" style="text-decoration: none;"> DOSA: Dravidian Code-Mixed Offensive Span Identification Dataset </a>. In Proceedings of the The First Workshop on Speech and Language Technologies for Dravidian Languages, EACL (2021)
 
@@ -141,26 +142,27 @@ Care Plan - 2015
 
 Service and leadership
 ======
+* 2022 Publicity Chair & Program Committee, FIRST INTERNATIONAL CONFERENCE ON SPEECH AND LANGUAGE TECHNOLOGIES FOR LOW-RESOURCE LANGUAGES, 2022
 * 2022 Program Committee, IEEE International Conference on Data and Decision Sciences, 2022
 * 2022 Program Committee, The Second Workshop on Speech and Language Technologies for Dravidian Languages @ ACL 2022
 * 2021 Program Committee, FIRE 2021 - Forum for Information Retrieval Evaluation, India 
-* 2021 Reviewer, Spring Language Resources and Evaluation Journal
-* 2021 Reviewer, Springer Nature Computer Science Journal
-* 2021 Reviewer, ACM Transactions on Asian and Low-Resource Language Information Processing
-* 2021 Reviewer, Elsevier Computer Speech and Language Journal 
+* 2021 Technical Program Committee, Spring Language Resources and Evaluation Journal
+* 2021 Technical Program Committee, Springer Nature Computer Science Journal
+* 2021 Technical Program Committee, ACM Transactions on Asian and Low-Resource Language Information Processing
+* 2021 Technical Program Committee, Elsevier Computer Speech and Language Journal 
 * 2021 Program Committee, EMNLP 2021 - Punta Cana, Dominican Republic
 * 2021 Program Committee, ACL-IJCNLP 2021 - Bangkok, Thailand
 * 2021 Program Committee, First Workshop On Language Technology For Equality, Diversity, Inclusion (Lt-Edi-2021) EACL 2021 - Kyiv, Ukraine
 * 2021 Program Committee, First Workshop on Speech and Language Technologies for Dravidian Languages @ EACL 2021 - Kyiv, Ukraine
 * 2021 Program Committee, NAACL 2021 - Mexico City
 * 2020 Program Committee, AACL-IJCNLP 2020 - Suzhou, China
-* 2020 Reviewer, International Workshop on Semantic Evaluation (SemEval-2020) - Barcelona, Spain
-* 2019 Reviewer, Journal of Experimental and Theoretical Artificial Intelligence
+* 2020 Program Committee, International Workshop on Semantic Evaluation (SemEval-2020) - Barcelona, Spain
+* 2019 Program Committee, Journal of Experimental and Theoretical Artificial Intelligence
 * 2019 Student Reviewer Mentor, ACM CSCW 2019 Austin, Texas
 * 2019 Industry Session Chair, ACM ICMR 2019, Ottawa, Canada
 * 2019 Organizer, Workshop of Cross Modal Learning and Application - ACM ICMR 2019 Ottawa, Canada
-* 2018 Reviewer, International Workshop on Semantic Evaluation (SemEval-2018) - NAACL-HLT New Orleans, USA
-* 2018 Reviewer, 27th International Conference on Computational Linguistics (COLING 2018) New Mexico, USA
-* 2017 Reviewer, International Workshop on Semantic Evaluation (SemEval-2017) - ACL Vancouver, Canada
-* 2016 Reviewer, International Workshop on Semantic Evaluation (SemEval-2016) - NAACL HLT San Diego, USA
+* 2018 Program Committee, International Workshop on Semantic Evaluation (SemEval-2018) - NAACL-HLT New Orleans, USA
+* 2018 Program Committee, 27th International Conference on Computational Linguistics (COLING 2018) New Mexico, USA
+* 2017 Program Committee, International Workshop on Semantic Evaluation (SemEval-2017) - ACL Vancouver, Canada
+* 2016 Program Committee, International Workshop on Semantic Evaluation (SemEval-2016) - NAACL HLT San Diego, USA
 * 2016 Open Source Contributor, AutoML Project
