@@ -5,8 +5,6 @@ permalink: /publications/
 author_profile: true
 ---
 
-*  <b> Manikandan Ravikiran </b> , Bharathi Raja Chakravarthi, <a href="https://manikandan-ravikiran.github.io/files/errors_span.pdf" style="text-decoration: none;"> On the Errors in Code-Mixed Tamil-English Offensive Span Identification </a>. Proceedings of the The 6th Workshop on Online Abuse and Harms (2022). Annual Conference of the North American Chapter of the Association for Computational Linguistics, 2022. (To Appear)
-
 * 	Hariharan RamakrishnaIyer LekshmiAmmal, <b> Manikandan Ravikiran </b>, Gayathri Nisha, Navyasree Balamuralidhar, Adithya Madhusoodanan, Anand Kumar Madasamy, Bharathi Raja Chakravarthi: <a href="https://arxiv.org/abs/2204.05488" style="text-decoration: none;"> Overlapping Word Removal is All You Need: Revisiting Data Imbalance in Hope Speech Detection </a>. CoRR abs/2204.05488 (2022)
 
 *  <b> Manikandan Ravikiran </b>, Bharathi Raja Chakravarthi <a href="https://manikandan-ravikiran.github.io/files/zeroshot.pdf" style="text-decoration: none;">Zero-shot Code-Mixed Offensive Span Identification through Rationale
