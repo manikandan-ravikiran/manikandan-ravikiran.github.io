@@ -6,13 +6,27 @@ redirect_from:
   - /about.html
 ---
 
-## 🧑 About Me
-
 I am Lead Research Scientist at ThoughtWorks Global AI Research, where I focus on enhancing Large Language Model (LLM) adoption through evaluation frameworks targeting **completeness**, **explanation fairness**, and **decoding optimization**. 
 
 Previously, I was a Research Scientist at Hitachi R&D India, where I worked on **AI for Advanced Driver Assistance Systems (ADAS)**, with emphasis on reasoning systems, project delivery, and scalable AI pipelines. My expertise spans **large-scale data analysis**, **project management**, and the development of mathematically grounded AI tools.
 
 I enjoy generating novel ideas and devising scalable solutions to complex real-world problems. Parallel to my industry work, I am a **Ph.D. Scholar at IIT Mandi**, advised by **Prof. Rohit Saluja** and **Prof. Arnav Bhavsar** where I study rare and impactful problems in AI with applications to the **Education domain**.
+
+---
+
+
+## 🔔 News
+
+- April 17, 2025 — Invited Guest Lecture on Multimodal Generative AI and Theoretical Diffusion Modeling at VIT Chennai  
+- March 31, 2025 — Joined ThoughtWorks Global AI Research  
+- March 20, 2025 - Congrats Hariharan (NIT-K) for succeful submission of thesis.
+- March 17, 2025 — Invited Lecture at NIT-Suratkal on Advanced Reinforcement Learning . Thank you IT Dept, NIT-K
+- Nov 10, 2024 — Three Papers Accepted at IEEE Bigdata 2024  
+- Dec 15, 2024 — Organized Workshop on Handling Resource Constraints using Big Data and AI  
+- Dec 10, 2024 — Presented at LC4 – Real World Applications @ SPELLL  
+- Jan 10, 2023 — Awarded 2023 ACL Best Reviewer Prize  (Thank you ACL!!!)
+- Sep 10, 2023 — Guest Lecture on Diffusion Modeling at VIT Chennai  
+- 2022 — Mentoring PhD Students at NIT-K (Hariharan) and VIT Vellore (Ramesh Kannan)
 
 ---
 
@@ -26,6 +40,20 @@ I enjoy generating novel ideas and devising scalable solutions to complex real-w
 - Low-Resource Modeling  
 - Deep Compression  
 - Legal AI and its Applications 
+
+---
+
+## 🤝 Collaborators
+
+- Dr. Snehanshu Saha (APP CAIR, BITS Pilani)  
+- Dr. Vinay Namboodiri (DelTA Lab, IIT Kanpur)  
+- Dr. Gaurav Sharma (IIT-K / INRIA-THOTH / NEC Media Analytics USA)  
+- Dr. Shinichi Satoh and team (National Institute of Informatics, Japan)  
+- Dr. Andreas Dengel, Sheraz Ahmed, Jorn Hees (DFKI Germany)  
+- Dr. Bharathi Raja Asoka Chakravarthi (National University of Ireland, Galway)  
+- Dr. Anand Kumar (NIT Karnataka, Surathkal)  
+- Dr. Sangeetha Sivanesan (NIT Tiruchirapalli)  
+- Dr. Ratnavel Rajalakshmi (VIT Vellore)  
 
 ---
 
@@ -86,7 +114,6 @@ I enjoy generating novel ideas and devising scalable solutions to complex real-w
 
 (See full list on [Google Scholar](https://scholar.google.co.in/citations?user=wY_iqNwAAAAJ&hl=en))
 
----
 
 ## 🧪 Active Projects
 
@@ -102,37 +129,8 @@ I enjoy generating novel ideas and devising scalable solutions to complex real-w
 - **Dialectual Educational Platform**  
   Developing culturally and linguistically adaptive learning systems for underrepresented languages and dialects.
 
----
-
-## 🔔 News
-
-- April 17, 2025 — Invited Guest Lecture on Multimodal Generative AI and Theoretical Diffusion Modeling at VIT Chennai  
-- March 31, 2025 — Joined ThoughtWorks Global AI Research  
-- March 20, 2025 - Congrats Hariharan (NIT-K) for succeful submission of thesis.
-- March 17, 2025 — Invited Lecture at NIT-Suratkal on Advanced Reinforcement Learning . Thank you IT Dept, NIT-K
-- Nov 10, 2024 — Three Papers Accepted at IEEE Bigdata 2024  
-- Dec 15, 2024 — Organized Workshop on Handling Resource Constraints using Big Data and AI  
-- Dec 10, 2024 — Presented at LC4 – Real World Applications @ SPELLL  
-- Jan 10, 2023 — Awarded 2023 ACL Best Reviewer Prize  (Thank you ACL!!!)
-- Sep 10, 2023 — Guest Lecture on Diffusion Modeling at VIT Chennai  
-- 2022 — Mentoring PhD Students at NIT-K (Hariharan) and VIT Vellore (Ramesh Kannan)
 
 ---
-
-## 🤝 Collaborators
-
-- Dr. Snehanshu Saha (APP CAIR, BITS Pilani)  
-- Dr. Vinay Namboodiri (DelTA Lab, IIT Kanpur)  
-- Dr. Gaurav Sharma (IIT-K / INRIA-THOTH / NEC Media Analytics USA)  
-- Dr. Shinichi Satoh and team (National Institute of Informatics, Japan)  
-- Dr. Andreas Dengel, Sheraz Ahmed, Jorn Hees (DFKI Germany)  
-- Dr. Bharathi Raja Asoka Chakravarthi (National University of Ireland, Galway)  
-- Dr. Anand Kumar (NIT Karnataka, Surathkal)  
-- Dr. Sangeetha Sivanesan (NIT Tiruchirapalli)  
-- Dr. Ratnavel Rajalakshmi (VIT Vellore)  
-
----
-
 ## 🎓 Teaching and Professional Service
 
 **Professional Services**  
