@@ -6,52 +6,40 @@ redirect_from:
   - /about.html
 ---
 
-I am Lead Research Scientist at ThoughtWorks Global AI Research, where I focus on enhancing Large Language Model (LLM) adoption through evaluation frameworks targeting **completeness**, **explanation fairness**, and **decoding optimization**. 
+I am Lead Research Scientist at ThoughtWorks Global AI Research, where I focus on enhancing Large Language Model (LLM) adoption through evaluation frameworks targeting **completeness**, **explanation fairness**, and **decoding optimization**. Previously, I was a Researcher at Hitachi R&D India, where I worked on **AI for Advanced Driver Assistance Systems (ADAS)**, with emphasis on reasoning systems, project delivery, and scalable AI pipelines. My expertise spans **large-scale data analysis**, **project management**, and the development of mathematically grounded AI tools.
 
-Previously, I was a Research Scientist at Hitachi R&D India, where I worked on **AI for Advanced Driver Assistance Systems (ADAS)**, with emphasis on reasoning systems, project delivery, and scalable AI pipelines. My expertise spans **large-scale data analysis**, **project management**, and the development of mathematically grounded AI tools.
-
-I enjoy generating novel ideas and devising scalable solutions to complex real-world problems. Parallel to my industry work, I am a **Ph.D. Scholar at IIT Mandi**, advised by **Prof. Rohit Saluja** and **Prof. Arnav Bhavsar** where I study rare and impactful problems in AI with applications to the **Education domain**.
+I enjoy generating novel ideas and devising scalable solutions to complex real-world problems. Parallel to my industry work, I am a **Ph.D. Student at IIT Mandi**, advised by **Prof. Rohit Saluja** and **Prof. Arnav Bhavsar** where I study rare and impactful problems in AI with applications to the **Education domain**. My research interests span across fairness in large language models (LLMs), explanation sufficiency, multilingual and educational NLP, legal AI, low-resource modeling, and deep model compression. I’m especially focused on developing evaluation methods and scalable attention mechanisms for complex reasoning tasks in real-world AI systems.
 
 ---
 
 
 ## 🔔 News
 
-- April 17, 2025 — Invited Guest Lecture on Multimodal Generative AI and Theoretical Diffusion Modeling at VIT Chennai  
-- March 31, 2025 — Joined ThoughtWorks Global AI Research  
-- March 20, 2025 - Congrats Hariharan (NIT-K) for succeful submission of thesis.
-- March 17, 2025 — Invited Lecture at NIT-Suratkal on Advanced Reinforcement Learning . Thank you IT Dept, NIT-K
-- Nov 10, 2024 — Three Papers Accepted at IEEE Bigdata 2024  
-- Dec 15, 2024 — Organized Workshop on Handling Resource Constraints using Big Data and AI  
-- Dec 10, 2024 — Presented at LC4 – Real World Applications @ SPELLL  
-- Jan 10, 2023 — Awarded 2023 ACL Best Reviewer Prize  (Thank you ACL!!!)
-- Sep 10, 2023 — Guest Lecture on Diffusion Modeling at VIT Chennai  
-- 2022 — Mentoring PhD Students at NIT-K (Hariharan) and VIT Vellore (Ramesh Kannan)
+- April 17, 2025 — Delivered an invited guest lecture on Multimodal Generative AI and Theoretical Diffusion Modeling at VIT Chennai.  
+- March 31, 2025 — Joined ThoughtWorks Global AI Research as Lead Research Scientist.  
+- March 20, 2025 — Congratulations to Hariharan (NIT-K) on the successful submission of his Ph.D. thesis.  
+- March 17, 2025 — Delivered an invited lecture on Advanced Reinforcement Learning at NIT Surathkal — Thank you to the Department of IT, NIT-K.  
+- Nov 20, 2024 - Delivered Keynote on Industrial Computer Vision at IEEE ICDDS 2025
+- Nov 10, 2024 — Three papers accepted at IEEE BigData 2024 — Congratulations to all co-authors!
+- Dec 15, 2024 — Successfully organized the workshop on Handling Resource Constraints using Big Data and AI.  
+- Dec 10, 2024 — Presented ongoing work at the LC4 Workshop on Real World Applications as part of SPELLL.  
+- Jan 10, 2023 — Honored to receive the ACL Best Reviewer Prize 2023 — ***Thank you ACL!***
+- Sep 10, 2023 — Delivered a guest lecture on Multilingual NLP at VIT Chennai.  
+- 2022 – Present — Mentoring Ph.D. scholars at NIT-K (Hariharan) and VIT Vellore (Ramesh Kannan) on multilingual NLP and Fake News Identification.
 
----
-
-## 🧠 Research Interests
-
-- Fairness in LLMs  
-- Explanation Sufficiency  
-- Educational AI
-- Manuscript Modeling, Image Deraining  
-- AI for ADAS  
-- Low-Resource Modeling  
-- Deep Compression  
-- Legal AI and its Applications 
 
 ---
 
 ## 🤝 Collaborators
 
-- Dr. Snehanshu Saha (APP CAIR, BITS Pilani)  
-- Dr. Vinay Namboodiri (DelTA Lab, IIT Kanpur)  
-- Dr. Gaurav Sharma (IIT-K / INRIA-THOTH / NEC Media Analytics USA)  
+- Dr. Martin Klignkit (Kyocera Innovation Labs, Japan)
 - Dr. Shinichi Satoh and team (National Institute of Informatics, Japan)  
 - Dr. Andreas Dengel, Sheraz Ahmed, Jorn Hees (DFKI Germany)  
-- Dr. Bharathi Raja Asoka Chakravarthi (National University of Ireland, Galway)  
-- Dr. Anand Kumar (NIT Karnataka, Surathkal)  
+- Dr. Snehanshu Saha (APP CAIR, BITS Pilani)  
+- Dr. Vinay Namboodiri (DelTA Lab, IIT Kanpur)
+- Dr. Bharathi Raja Asoka Chakravarthi (National University of Ireland, Galway)    
+- Dr. Gaurav Sharma (IIT-K / INRIA-THOTH / NEC Media Analytics USA)  
+- Dr. Anand Kumar Madasamy (NIT Karnataka, Surathkal)  
 - Dr. Sangeetha Sivanesan (NIT Tiruchirapalli)  
 - Dr. Ratnavel Rajalakshmi (VIT Vellore)  
 
@@ -136,8 +124,8 @@ I enjoy generating novel ideas and devising scalable solutions to complex real-w
 **Professional Services**  
 - TPC Member: ACM ICMR (2019), IEEE ICDDS (2022), FIRE (2021, 2022), DravidianLangTech
 (2024,2023, 2022, 2021), LTEDI (2024,2023, 2022, 2021)
-- Reviewer: ACL (2025, 2024,2023, 2020, 2017), EMNLP (2023, 2022), AACL (2022, 2020), EACL (2021, 2023) ,
-NAACL (2018), COLING (2024,2018), IEEE Bigdata (2020), ACM ICMR (2019), IEEE ICMLA (2023), IEEE ICDDS
+- Reviewer: ACL (2025, 2024,2023, 2020, 2017), EMNLP (2024, 2023, 2022), AACL (2024, 2022, 2020), EACL (2021, 2023) , AIED(2025),
+NAACL (2024, 2018), COLING (2024,2018), IEEE Bigdata (2020), ACM ICMR (2019), IEEE ICMLA (2023), IEEE ICDDS
 (2022), FIRE (2021, 2022), DravidianLangTech (2023, 2022, 2021), LTEDI (2023, 2022, 2021), Springer Language
 Resources and Evaluation Journal, Elseivier Engineering Applications of Artificial Intelligence, ACM Transactions on
 Asian and Low-Resource Language Information Processing, Springer Nature Computer Science Journal, Taylor & Francis
@@ -183,7 +171,6 @@ Workshop on Low Resource Cross-Domain, Cross-Lingual & Cross-Modal Offensive Con
 
 ## 🔗 Links
 
-- [CV (PDF)](link-to-cv.pdf)  
 - [Google Scholar](https://scholar.google.co.in/citations?user=wY_iqNwAAAAJ&hl=en)  
 - [GitHub](https://github.com/manikandan-ravikiran)  
 - 📫 Email: manikandan.ravikiran@gmail.com  
