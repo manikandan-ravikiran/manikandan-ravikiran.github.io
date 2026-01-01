@@ -841,29 +841,38 @@
                 // IMPORTANT: Replace 'YOUR_GITHUB_USERNAME' with your actual GitHub username
                 // This allows the app to find your encrypted config file
                 const possibleRepos = [
-                    { owner: 'manikandan-ravikiran', repo: 'day-tracker-data' }
+                    { owner: 'YOUR_GITHUB_USERNAME', repo: 'day-tracker-data' }
                 ];
 
                 let configLoaded = false;
                 
                 for (const repoInfo of possibleRepos) {
                     try {
-                        const url = `https://api.github.com/repos/${repoInfo.owner}/${repoInfo.repo}/config.enc`;
+                        // Use raw.githubusercontent.com to avoid CORS issues when reading
+                        const rawUrl = `https://raw.githubusercontent.com/${repoInfo.owner}/${repoInfo.repo}/main/config.enc`;
                         
-                        const response = await fetch(url, {
-                            headers: {
-                                'Accept': 'application/vnd.github.v3+json'
-                            }
-                        });
+                        let response = await fetch(rawUrl);
+                        
+                        // If main branch doesn't exist, try master
+                        if (response.status === 404) {
+                            const masterUrl = `https://raw.githubusercontent.com/${repoInfo.owner}/${repoInfo.repo}/master/config.enc`;
+                            response = await fetch(masterUrl);
+                        }
 
                         if (response.status === 404) continue;
                         if (!response.ok) continue;
 
-                        const fileData = await response.json();
-                        this.configSha = fileData.sha;
+                        // For raw content, we need to get the SHA from the API
+                        const apiUrl = `https://api.github.com/repos/${repoInfo.owner}/${repoInfo.repo}/contents/config.enc`;
+                        const apiResponse = await fetch(apiUrl);
+                        if (apiResponse.ok) {
+                            const apiData = await apiResponse.json();
+                            this.configSha = apiData.sha;
+                        }
 
+                        const encryptedContent = await response.text();
+                        
                         // Decrypt the config
-                        const encryptedContent = atob(fileData.content);
                         const decrypted = CryptoJS.AES.decrypt(encryptedContent, password);
                         const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
 
@@ -897,9 +906,11 @@
                     // Encrypt the config with the password
                     const jsonConfig = JSON.stringify(configToSave);
                     const encrypted = CryptoJS.AES.encrypt(jsonConfig, this.config.password).toString();
+                    
+                    // GitHub API expects base64 encoded content
                     const base64Content = btoa(encrypted);
 
-                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/config.enc`;
+                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/config.enc`;
                     
                     const body = {
                         message: 'Save encrypted configuration',
@@ -913,7 +924,7 @@
                     const response = await fetch(url, {
                         method: 'PUT',
                         headers: {
-                            'Authorization': `token ${this.config.token}`,
+                            'Authorization': `Bearer ${this.config.token}`,
                             'Accept': 'application/vnd.github.v3+json',
                             'Content-Type': 'application/json'
                         },
@@ -921,8 +932,9 @@
                     });
 
                     if (!response.ok) {
-                        const error = await response.json();
-                        throw new Error(error.message || 'Failed to save configuration');
+                        const errorText = await response.text();
+                        console.error('GitHub API error:', errorText);
+                        throw new Error(`Failed to save configuration: ${response.status} ${response.statusText}`);
                     }
 
                     const result = await response.json();
@@ -936,11 +948,11 @@
             async loadData() {
                 try {
                     this.setStatus('Loading data...');
-                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/data.enc`;
+                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/data.enc`;
                     
                     const response = await fetch(url, {
                         headers: {
-                            'Authorization': `token ${this.config.token}`,
+                            'Authorization': `Bearer ${this.config.token}`,
                             'Accept': 'application/vnd.github.v3+json'
                         }
                     });
@@ -953,7 +965,7 @@
                     }
 
                     if (!response.ok) {
-                        throw new Error('Failed to load data from GitHub');
+                        throw new Error(`Failed to load data: ${response.status} ${response.statusText}`);
                     }
 
                     const fileData = await response.json();
@@ -986,7 +998,7 @@
                     const encrypted = CryptoJS.AES.encrypt(jsonData, this.config.password).toString();
                     const base64Content = btoa(encrypted);
 
-                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/data.enc`;
+                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/data.enc`;
                     
                     const body = {
                         message: `Update data - ${new Date().toISOString()}`,
@@ -1000,7 +1012,7 @@
                     const response = await fetch(url, {
                         method: 'PUT',
                         headers: {
-                            'Authorization': `token ${this.config.token}`,
+                            'Authorization': `Bearer ${this.config.token}`,
                             'Accept': 'application/vnd.github.v3+json',
                             'Content-Type': 'application/json'
                         },
@@ -1008,8 +1020,9 @@
                     });
 
                     if (!response.ok) {
-                        const error = await response.json();
-                        throw new Error(error.message || 'Failed to save data');
+                        const errorText = await response.text();
+                        console.error('GitHub API error:', errorText);
+                        throw new Error(`Failed to save data: ${response.status} ${response.statusText}`);
                     }
 
                     const result = await response.json();
