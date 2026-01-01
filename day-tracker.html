@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Day Tracker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #151515;
-            --bg-tertiary: #1f1f1f;
-            --text-primary: #e8e8e8;
-            --text-secondary: #a0a0a0;
-            --text-tertiary: #6b6b6b;
-            --accent-tasks: #ff6b6b;
-            --accent-time: #4ecdc4;
-            --accent-achievements: #ffd93d;
-            --accent-thoughts: #a78bfa;
-            --border: #2a2a2a;
-            --hover: #252525;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-tertiary: #e8eaed;
+            --text-primary: #202124;
+            --text-secondary: #5f6368;
+            --text-tertiary: #80868b;
+            --accent-tasks: #ea4335;
+            --accent-time: #34a853;
+            --accent-achievements: #fbbc04;
+            --accent-thoughts: #4285f4;
+            --border: #dadce0;
+            --hover: #f1f3f4;
+            --shadow-sm: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15);
+            --shadow-md: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+            --shadow-lg: 0 2px 6px 2px rgba(60,64,67,0.15), 0 8px 24px 4px rgba(60,64,67,0.15);
         }
 
         * {
@@ -28,64 +32,147 @@
         }
 
         body {
-            font-family: 'DM Sans', sans-serif;
-            background: var(--bg-primary);
+            font-family: 'Roboto', 'Google Sans', sans-serif;
+            background: var(--bg-secondary);
             color: var(--text-primary);
             line-height: 1.6;
             min-height: 100vh;
         }
 
         .app-container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 2rem;
         }
 
         .header {
-            margin-bottom: 3rem;
+            background: var(--bg-primary);
             border-bottom: 1px solid var(--border);
-            padding-bottom: 2rem;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
         }
 
         .header h1 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        .header-subtitle {
-            color: var(--text-tertiary);
+        .header-logo {
+            color: var(--accent-thoughts);
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 600px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 3rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 24px;
             font-size: 0.95rem;
-            letter-spacing: 0.5px;
+            color: var(--text-primary);
+            transition: all 0.2s;
         }
 
-        .setup-container, .main-content {
-            opacity: 0;
-            animation: fadeIn 0.5s ease forwards;
+        .search-input:focus {
+            outline: none;
+            background: var(--bg-primary);
+            box-shadow: var(--shadow-md);
         }
 
-        @keyframes fadeIn {
-            to { opacity: 1; }
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-tertiary);
+            pointer-events: none;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-btn:hover {
+            background: var(--hover);
+        }
+
+        .btn-primary {
+            background: var(--accent-thoughts);
+            color: white;
+            border: none;
+            padding: 0.625rem 1.5rem;
+            border-radius: 24px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .main-content {
+            padding: 2rem;
+        }
+
+        .setup-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: var(--bg-secondary);
         }
 
         .setup-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 2.5rem;
-            max-width: 500px;
-            margin: 0 auto;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 3rem;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: var(--shadow-lg);
         }
 
         .setup-card h2 {
-            font-family: 'Crimson Pro', serif;
+            font-family: 'Google Sans', sans-serif;
             font-size: 1.75rem;
-            margin-bottom: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         .form-group {
@@ -96,175 +183,121 @@
             display: block;
             margin-bottom: 0.5rem;
             color: var(--text-secondary);
-            font-size: 0.9rem;
+            font-size: 0.875rem;
             font-weight: 500;
         }
 
-        .form-group input, .form-group select {
+        .form-group input, .form-group select, .form-group textarea {
             width: 100%;
-            padding: 0.75rem 1rem;
-            background: var(--bg-tertiary);
+            padding: 0.75rem;
+            background: var(--bg-primary);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 4px;
             color: var(--text-primary);
-            font-family: 'DM Sans', sans-serif;
+            font-family: 'Roboto', sans-serif;
             font-size: 0.95rem;
             transition: all 0.2s;
         }
 
-        .form-group input:focus {
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
             outline: none;
             border-color: var(--accent-thoughts);
-            box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.1);
         }
 
-        .btn {
-            padding: 0.75rem 1.5rem;
-            background: var(--accent-thoughts);
-            color: var(--bg-primary);
-            border: none;
-            border-radius: 8px;
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 600;
-            font-size: 0.95rem;
-            cursor: pointer;
-            transition: all 0.2s;
-            /* width: 100%; */
-        }
-
-        .btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
-        }
-
-        .btn-secondary {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
-            border: 1px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            background: var(--hover);
-            box-shadow: none;
-        }
-
-        .status-bar {
+        .toolbar {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 1rem;
             margin-bottom: 2rem;
-            padding: 1rem 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .filter-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover {
+            background: var(--hover);
+        }
+
+        .filter-btn.active {
+            background: var(--accent-thoughts);
+            color: white;
+            border-color: var(--accent-thoughts);
+        }
+
+        .quick-add {
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .quick-add-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.75rem;
+        }
+
+        .quick-add-btn {
+            padding: 0.75rem;
             background: var(--bg-secondary);
             border: 1px solid var(--border);
-            border-radius: 10px;
-        }
-
-        .status-info {
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-        }
-
-        .sync-status {
+            border-radius: 8px;
+            cursor: pointer;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-size: 0.85rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            font-weight: 500;
         }
 
-        .sync-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--accent-achievements);
-            animation: pulse 2s infinite;
+        .quick-add-btn:hover {
+            background: var(--hover);
+            box-shadow: var(--shadow-sm);
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
+        .quick-add-btn.tasks { border-left: 3px solid var(--accent-tasks); }
+        .quick-add-btn.time { border-left: 3px solid var(--accent-time); }
+        .quick-add-btn.achievements { border-left: 3px solid var(--accent-achievements); }
+        .quick-add-btn.thoughts { border-left: 3px solid var(--accent-thoughts); }
 
-        .add-item-section {
-            margin-bottom: 2rem;
-        }
-
-        .add-buttons {
+        .items-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .add-btn {
-            padding: 1.5rem;
-            background: var(--bg-secondary);
-            border: 2px solid var(--border);
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .add-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--accent);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-
-        .add-btn:hover::before {
-            transform: scaleX(1);
-        }
-
-        .add-btn:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-        }
-
-        .add-btn.tasks { --accent: var(--accent-tasks); }
-        .add-btn.time { --accent: var(--accent-time); }
-        .add-btn.achievements { --accent: var(--accent-achievements); }
-        .add-btn.thoughts { --accent: var(--accent-thoughts); }
-
-        .add-btn-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .add-btn-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 0.25rem;
-            color: var(--text-primary);
-        }
-
-        .add-btn-desc {
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-        }
-
-        .items-grid {
-            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1rem;
         }
 
         .item-card {
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--accent);
+            background: var(--bg-primary);
             border-radius: 8px;
-            padding: 1.5rem;
+            padding: 1.25rem;
+            box-shadow: var(--shadow-sm);
             transition: all 0.2s;
+            border-left: 4px solid var(--accent);
+            cursor: pointer;
         }
 
         .item-card:hover {
-            background: var(--hover);
-            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
         }
 
         .item-card.tasks { --accent: var(--accent-tasks); }
@@ -279,46 +312,66 @@
             margin-bottom: 0.75rem;
         }
 
-        .item-type {
-            display: inline-block;
+        .item-type-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
             padding: 0.25rem 0.75rem;
             background: var(--accent);
-            color: var(--bg-primary);
-            border-radius: 20px;
+            color: white;
+            border-radius: 12px;
             font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 0.25rem;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .item-card:hover .item-actions {
+            opacity: 1;
+        }
+
+        .item-action-btn {
+            background: none;
+            border: none;
+            padding: 0.25rem;
+            border-radius: 4px;
+            cursor: pointer;
+            color: var(--text-tertiary);
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .item-action-btn:hover {
+            background: var(--hover);
+            color: var(--text-primary);
         }
 
         .item-content {
             color: var(--text-primary);
-            margin-bottom: 0.5rem;
-            line-height: 1.6;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
             white-space: pre-wrap;
+            word-break: break-word;
         }
 
         .item-meta {
             display: flex;
             gap: 1rem;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: var(--text-tertiary);
+            flex-wrap: wrap;
         }
 
-        .delete-btn {
-            background: none;
-            border: none;
-            color: var(--text-tertiary);
-            cursor: pointer;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            transition: all 0.2s;
-            font-size: 0.85rem;
-        }
-
-        .delete-btn:hover {
-            color: var(--accent-tasks);
-            background: rgba(255, 107, 107, 0.1);
+        .item-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
         }
 
         .modal {
@@ -328,11 +381,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 1000;
             align-items: center;
             justify-content: center;
+            padding: 1rem;
         }
 
         .modal.active {
@@ -340,20 +393,20 @@
         }
 
         .modal-content {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
+            background: var(--bg-primary);
+            border-radius: 8px;
+            padding: 0;
             max-width: 600px;
-            width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
+            width: 100%;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
             animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         @keyframes slideUp {
             from {
-                transform: translateY(20px);
+                transform: translateY(40px);
                 opacity: 0;
             }
             to {
@@ -363,57 +416,50 @@
         }
 
         .modal-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1.5rem;
         }
 
         .modal-title {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.5rem;
-            font-weight: 600;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 500;
         }
 
-        .close-btn {
-            background: none;
-            border: none;
-            color: var(--text-tertiary);
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.25rem;
-            line-height: 1;
-            transition: color 0.2s;
+        .modal-body {
+            padding: 1.5rem;
+            max-height: calc(90vh - 150px);
+            overflow-y: auto;
         }
 
-        .close-btn:hover {
-            color: var(--text-primary);
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 150px;
-            padding: 0.75rem 1rem;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            resize: vertical;
-            transition: all 0.2s;
-        }
-
-        textarea:focus {
-            outline: none;
-            border-color: var(--accent-thoughts);
-            box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.1);
-        }
-
-        .modal-actions {
+        .modal-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--border);
             display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 0.75rem;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            padding: 0.625rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .btn-text {
+            background: none;
+            color: var(--accent-thoughts);
+        }
+
+        .btn-text:hover {
+            background: rgba(66, 133, 244, 0.08);
         }
 
         .empty-state {
@@ -422,168 +468,215 @@
             color: var(--text-tertiary);
         }
 
-        .empty-state-icon {
-            font-size: 3rem;
+        .empty-icon {
+            font-size: 4rem;
             margin-bottom: 1rem;
-            opacity: 0.5;
+            opacity: 0.3;
+        }
+
+        .error, .success {
+            padding: 0.75rem 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
         }
 
         .error {
-            background: rgba(255, 107, 107, 0.1);
-            border: 1px solid var(--accent-tasks);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            color: var(--accent-tasks);
+            background: #fce8e6;
+            color: #c5221f;
+            border-left: 4px solid var(--accent-tasks);
         }
 
         .success {
-            background: rgba(78, 205, 196, 0.1);
-            border: 1px solid var(--accent-time);
-            border-radius: 8px;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            color: var(--accent-time);
+            background: #e6f4ea;
+            color: #137333;
+            border-left: 4px solid var(--accent-time);
         }
 
-        .help-text {
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-            margin-top: 0.5rem;
+        textarea {
+            min-height: 120px;
+            resize: vertical;
         }
 
-        .date-filter {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            align-items: center;
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
 
-        .date-filter select {
-            padding: 0.5rem 1rem;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            color: var(--text-primary);
-            font-family: 'DM Sans', sans-serif;
-            cursor: pointer;
+        .status-pending {
+            background: #fce8e6;
+            color: #c5221f;
+        }
+
+        .status-in-progress {
+            background: #fef7e0;
+            color: #ea8600;
+        }
+
+        .status-completed {
+            background: #e6f4ea;
+            color: #137333;
         }
 
         @media (max-width: 768px) {
-            .add-buttons {
+            .header-content {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-bar {
+                max-width: 100%;
+            }
+
+            .items-container {
                 grid-template-columns: 1fr;
             }
-            
-            .header h1 {
-                font-size: 2rem;
+
+            .toolbar {
+                flex-direction: column;
+                align-items: stretch;
             }
         }
     </style>
 </head>
 <body>
-    <div class="app-container">
-        <div class="header">
-            <h1>Day Tracker</h1>
-            <div class="header-subtitle">Your encrypted personal tracker, stored securely on GitHub</div>
-        </div>
-
+    <div id="app">
         <!-- Login Screen -->
         <div id="loginScreen" class="setup-container">
             <div class="setup-card">
-                <h2>Enter Password</h2>
+                <h2>🔒 Day Tracker</h2>
                 <div id="loginError" class="error" style="display: none;"></div>
                 
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Your password" autofocus>
+                    <input type="password" id="password" placeholder="Enter your password" autofocus>
                 </div>
 
-                <button class="btn" onclick="app.login()">Unlock Tracker</button>
+                <button class="btn-primary" style="width: 100%;" onclick="app.login()">Unlock</button>
             </div>
         </div>
 
-        <!-- Main App Screen -->
-        <div id="mainScreen" class="main-content" style="display: none;">
-            <div class="status-bar">
-                <div class="status-info">
-                    <span id="statusText">Ready</span>
-                </div>
-                <div class="sync-status">
-                    <span class="sync-dot"></span>
-                    <span id="syncText">Synced</span>
-                </div>
-                <button class="btn btn-secondary" onclick="app.logout()">Logout</button>
-            </div>
+        <!-- Main App -->
+        <div id="mainApp" style="display: none;">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-content">
+                    <h1>
+                        <span class="material-icons header-logo">event_note</span>
+                        Day Tracker
+                    </h1>
+                    
+                    <div class="search-bar">
+                        <span class="material-icons search-icon">search</span>
+                        <input 
+                            type="text" 
+                            class="search-input" 
+                            id="searchInput"
+                            placeholder="Search your entries..."
+                            oninput="app.handleSearch()"
+                        >
+                    </div>
 
-            <div class="add-item-section">
-                <div class="add-buttons">
-                    <div class="add-btn tasks" onclick="app.openModal('tasks')">
-                        <div class="add-btn-icon">✓</div>
-                        <div class="add-btn-title">Tasks</div>
-                        <div class="add-btn-desc">Track your to-dos and accomplishments</div>
-                    </div>
-                    <div class="add-btn time" onclick="app.openModal('time')">
-                        <div class="add-btn-icon">⏱</div>
-                        <div class="add-btn-title">Time Logs</div>
-                        <div class="add-btn-desc">Record how you spend your time</div>
-                    </div>
-                    <div class="add-btn achievements" onclick="app.openModal('achievements')">
-                        <div class="add-btn-icon">🏆</div>
-                        <div class="add-btn-title">Achievements</div>
-                        <div class="add-btn-desc">Celebrate wins and journal entries</div>
-                    </div>
-                    <div class="add-btn thoughts" onclick="app.openModal('thoughts')">
-                        <div class="add-btn-icon">💭</div>
-                        <div class="add-btn-title">Futuristic Thoughts</div>
-                        <div class="add-btn-desc">Ideas and reflections for tomorrow</div>
+                    <div class="header-actions">
+                        <button class="icon-btn" onclick="app.exportToCSV()" title="Export to CSV">
+                            <span class="material-icons">download</span>
+                        </button>
+                        <button class="icon-btn" onclick="app.logout()" title="Logout">
+                            <span class="material-icons">logout</span>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <div class="date-filter">
-                <label>View:</label>
-                <select id="dateFilter" onchange="app.filterByDate()">
-                    <option value="today">Today</option>
-                    <option value="yesterday">Yesterday</option>
-                    <option value="week">This Week</option>
-                    <option value="month">This Month</option>
-                    <option value="all">All Time</option>
-                </select>
-            </div>
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Quick Add -->
+                <div class="quick-add">
+                    <div class="quick-add-buttons">
+                        <button class="quick-add-btn tasks" onclick="app.openModal('tasks')">
+                            <span class="material-icons">check_circle</span>
+                            Task
+                        </button>
+                        <button class="quick-add-btn time" onclick="app.openModal('time')">
+                            <span class="material-icons">schedule</span>
+                            Time Log
+                        </button>
+                        <button class="quick-add-btn achievements" onclick="app.openModal('achievements')">
+                            <span class="material-icons">emoji_events</span>
+                            Achievement
+                        </button>
+                        <button class="quick-add-btn thoughts" onclick="app.openModal('thoughts')">
+                            <span class="material-icons">lightbulb</span>
+                            Thought
+                        </button>
+                    </div>
+                </div>
 
-            <div id="itemsContainer" class="items-grid"></div>
+                <!-- Toolbar -->
+                <div class="toolbar">
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all" onclick="app.setTypeFilter('all')">All</button>
+                        <button class="filter-btn" data-filter="tasks" onclick="app.setTypeFilter('tasks')">Tasks</button>
+                        <button class="filter-btn" data-filter="time" onclick="app.setTypeFilter('time')">Time Logs</button>
+                        <button class="filter-btn" data-filter="achievements" onclick="app.setTypeFilter('achievements')">Achievements</button>
+                        <button class="filter-btn" data-filter="thoughts" onclick="app.setTypeFilter('thoughts')">Thoughts</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <select class="filter-btn" id="dateFilter" onchange="app.filterByDate()">
+                            <option value="all">All Time</option>
+                            <option value="today">Today</option>
+                            <option value="yesterday">Yesterday</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Items Grid -->
+                <div id="itemsContainer" class="items-container"></div>
+            </div>
         </div>
 
-        <!-- Modal for adding items -->
-        <div id="addModal" class="modal">
+        <!-- Add/Edit Modal -->
+        <div id="itemModal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
                     <h3 class="modal-title" id="modalTitle">Add Item</h3>
-                    <button class="close-btn" onclick="app.closeModal()">×</button>
+                    <button class="icon-btn" onclick="app.closeModal()">
+                        <span class="material-icons">close</span>
+                    </button>
                 </div>
                 
-                <div class="form-group">
-                    <label for="itemContent">Content</label>
-                    <textarea id="itemContent" placeholder="Write your entry here..."></textarea>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="itemContent">Content</label>
+                        <textarea id="itemContent" placeholder="Write your entry here..."></textarea>
+                    </div>
+
+                    <div class="form-group" id="taskStatusGroup" style="display: none;">
+                        <label for="taskStatus">Status</label>
+                        <select id="taskStatus">
+                            <option value="pending">Pending</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="completed">Completed</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="timeLogsGroup" style="display: none;">
+                        <label for="timeSpent">Time Spent (hours)</label>
+                        <input type="number" id="timeSpent" step="0.5" min="0" placeholder="2.5">
+                    </div>
                 </div>
 
-                <div class="form-group" id="taskStatusGroup" style="display: none;">
-                    <label for="taskStatus">Status</label>
-                    <select id="taskStatus">
-                        <option value="pending">Pending</option>
-                        <option value="in-progress">In Progress</option>
-                        <option value="completed">Completed</option>
-                    </select>
-                </div>
-
-                <div class="form-group" id="timeLogsGroup" style="display: none;">
-                    <label for="timeSpent">Time Spent (hours)</label>
-                    <input type="number" id="timeSpent" step="0.5" min="0" placeholder="2.5">
-                </div>
-
-                <div class="modal-actions">
-                    <button class="btn" onclick="app.addItem()">Add Entry</button>
-                    <button class="btn btn-secondary" onclick="app.closeModal()">Cancel</button>
+                <div class="modal-footer">
+                    <button class="btn btn-text" onclick="app.closeModal()">Cancel</button>
+                    <button class="btn btn-primary" onclick="app.saveItem()">
+                        <span id="saveButtonText">Save</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -596,26 +689,13 @@
         // ============================================================================
         
         const CONFIG = {
+            // SHA-256 hash of your password
             passwordHash: 'c601fc6618695ce796d065477bb6dc5168ffd74716292a4fff47cc30806c431b',
             
-
+            // Your GitHub configuration encrypted with your password
             encryptedConfig: 'U2FsdGVkX18zdROQ8JB8TJx9kn3xbjzRXgFcRg5Ldnf2X8kmdUMDDaQI9WgVJbgGVVjE3d0x020QGsimBzkphYc/389L125VGJizUs2i2Nf0JRqFcdQao5mWhoghAgyLwrCJJczYcdHiL0QO1H6LjawunUPpDce2jETavsiL4CM='
         };
         
-        // ============================================================================
-        // HELPER: Run this in browser console to generate your hashes
-        // ============================================================================
-        // 
-        // const password = "your-strong-password";
-        // const config = {
-        //     token: "ghp_your_github_token",
-        //     owner: "your-github-username",
-        //     repo: "day-tracker-data"
-        // };
-        // 
-        // console.log("Password Hash:", CryptoJS.SHA256(password).toString());
-        // console.log("Encrypted Config:", CryptoJS.AES.encrypt(JSON.stringify(config), password).toString());
-        //
         // ============================================================================
 
         const app = {
@@ -623,6 +703,12 @@
             data: [],
             currentType: null,
             dataSha: null,
+            editingId: null,
+            currentFilter: {
+                type: 'all',
+                date: 'all',
+                search: ''
+            },
 
             async init() {
                 const cachedPassword = sessionStorage.getItem('dayTrackerPassword');
@@ -639,13 +725,13 @@
             },
 
             showLoginScreen() {
-                document.getElementById('loginScreen').style.display = 'block';
-                document.getElementById('mainScreen').style.display = 'none';
+                document.getElementById('loginScreen').style.display = 'flex';
+                document.getElementById('mainApp').style.display = 'none';
             },
 
             showMainScreen() {
                 document.getElementById('loginScreen').style.display = 'none';
-                document.getElementById('mainScreen').style.display = 'block';
+                document.getElementById('mainApp').style.display = 'block';
                 this.renderItems();
             },
 
@@ -671,7 +757,6 @@
 
             async unlockApp(password) {
                 try {
-                    // Decrypt the GitHub config
                     const decrypted = CryptoJS.AES.decrypt(CONFIG.encryptedConfig, password);
                     const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
                     
@@ -682,10 +767,8 @@
                     this.config = JSON.parse(decryptedText);
                     this.config.password = password;
                     
-                    // Cache password for session
                     sessionStorage.setItem('dayTrackerPassword', password);
                     
-                    // Load data
                     await this.loadData();
                     this.showMainScreen();
                 } catch (error) {
@@ -696,7 +779,6 @@
 
             async loadData() {
                 try {
-                    this.setStatus('Loading data...');
                     const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/data.enc`;
                     
                     const response = await fetch(url, {
@@ -709,7 +791,6 @@
                     if (response.status === 404) {
                         this.data = [];
                         this.dataSha = null;
-                        this.setStatus('Ready - No existing data');
                         return;
                     }
 
@@ -720,7 +801,6 @@
                     const fileData = await response.json();
                     this.dataSha = fileData.sha;
 
-                    // Decrypt the data
                     const encryptedContent = atob(fileData.content.replace(/\n/g, ''));
                     const decrypted = CryptoJS.AES.decrypt(encryptedContent, this.config.password);
                     const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
@@ -730,19 +810,14 @@
                     }
 
                     this.data = JSON.parse(decryptedText);
-                    this.setStatus('Data loaded successfully');
-                    this.setSyncStatus('Synced');
                 } catch (error) {
                     console.error('Load error:', error);
-                    this.setStatus('Error: ' + error.message);
                     this.data = [];
                 }
             },
 
             async saveData() {
                 try {
-                    this.setSyncStatus('Syncing...');
-                    
                     const jsonData = JSON.stringify(this.data);
                     const encrypted = CryptoJS.AES.encrypt(jsonData, this.config.password).toString();
                     const base64Content = btoa(encrypted);
@@ -774,70 +849,105 @@
 
                     const result = await response.json();
                     this.dataSha = result.content.sha;
-                    
-                    this.setSyncStatus('Synced');
-                    this.setStatus('Data saved successfully');
                 } catch (error) {
                     console.error('Save error:', error);
-                    this.setSyncStatus('Error syncing');
-                    this.setStatus('Error: ' + error.message);
+                    alert('Failed to save data: ' + error.message);
                 }
             },
 
-            openModal(type) {
+            openModal(type, itemId = null) {
                 this.currentType = type;
-                const modal = document.getElementById('addModal');
+                this.editingId = itemId;
+                
+                const modal = document.getElementById('itemModal');
                 const title = document.getElementById('modalTitle');
                 const taskGroup = document.getElementById('taskStatusGroup');
                 const timeGroup = document.getElementById('timeLogsGroup');
+                const saveBtn = document.getElementById('saveButtonText');
 
-                document.getElementById('itemContent').value = '';
                 taskGroup.style.display = 'none';
                 timeGroup.style.display = 'none';
 
                 const titles = {
-                    tasks: 'Add Task',
-                    time: 'Add Time Log',
-                    achievements: 'Add Achievement',
-                    thoughts: 'Add Futuristic Thought'
+                    tasks: 'Task',
+                    time: 'Time Log',
+                    achievements: 'Achievement',
+                    thoughts: 'Thought'
                 };
-                title.textContent = titles[type];
 
-                if (type === 'tasks') {
-                    taskGroup.style.display = 'block';
-                }
-                if (type === 'time') {
-                    timeGroup.style.display = 'block';
+                if (itemId) {
+                    const item = this.data.find(i => i.id === itemId);
+                    title.textContent = `Edit ${titles[type]}`;
+                    saveBtn.textContent = 'Update';
+                    document.getElementById('itemContent').value = item.content;
+                    
+                    if (type === 'tasks') {
+                        taskGroup.style.display = 'block';
+                        document.getElementById('taskStatus').value = item.status;
+                    }
+                    if (type === 'time') {
+                        timeGroup.style.display = 'block';
+                        document.getElementById('timeSpent').value = item.timeSpent || '';
+                    }
+                } else {
+                    title.textContent = `Add ${titles[type]}`;
+                    saveBtn.textContent = 'Save';
+                    document.getElementById('itemContent').value = '';
+                    
+                    if (type === 'tasks') {
+                        taskGroup.style.display = 'block';
+                        document.getElementById('taskStatus').value = 'pending';
+                    }
+                    if (type === 'time') {
+                        timeGroup.style.display = 'block';
+                        document.getElementById('timeSpent').value = '';
+                    }
                 }
 
                 modal.classList.add('active');
             },
 
             closeModal() {
-                document.getElementById('addModal').classList.remove('active');
+                document.getElementById('itemModal').classList.remove('active');
+                this.editingId = null;
             },
 
-            async addItem() {
+            async saveItem() {
                 const content = document.getElementById('itemContent').value;
                 if (!content.trim()) return;
 
-                const item = {
-                    id: Date.now(),
-                    type: this.currentType,
-                    content: content,
-                    timestamp: new Date().toISOString(),
-                    date: new Date().toLocaleDateString()
-                };
+                if (this.editingId) {
+                    // Update existing item
+                    const item = this.data.find(i => i.id === this.editingId);
+                    item.content = content;
+                    item.updatedAt = new Date().toISOString();
+                    
+                    if (this.currentType === 'tasks') {
+                        item.status = document.getElementById('taskStatus').value;
+                    }
+                    if (this.currentType === 'time') {
+                        item.timeSpent = parseFloat(document.getElementById('timeSpent').value) || 0;
+                    }
+                } else {
+                    // Create new item
+                    const item = {
+                        id: Date.now(),
+                        type: this.currentType,
+                        content: content,
+                        timestamp: new Date().toISOString(),
+                        date: new Date().toLocaleDateString()
+                    };
 
-                if (this.currentType === 'tasks') {
-                    item.status = document.getElementById('taskStatus').value;
+                    if (this.currentType === 'tasks') {
+                        item.status = document.getElementById('taskStatus').value;
+                    }
+                    if (this.currentType === 'time') {
+                        item.timeSpent = parseFloat(document.getElementById('timeSpent').value) || 0;
+                    }
+
+                    this.data.unshift(item);
                 }
 
-                if (this.currentType === 'time') {
-                    item.timeSpent = parseFloat(document.getElementById('timeSpent').value) || 0;
-                }
-
-                this.data.unshift(item);
                 await this.saveData();
                 this.renderItems();
                 this.closeModal();
@@ -851,38 +961,72 @@
                 this.renderItems();
             },
 
+            setTypeFilter(type) {
+                this.currentFilter.type = type;
+                
+                // Update button states
+                document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.filter === type);
+                });
+                
+                this.renderItems();
+            },
+
             filterByDate() {
+                this.currentFilter.date = document.getElementById('dateFilter').value;
+                this.renderItems();
+            },
+
+            handleSearch() {
+                this.currentFilter.search = document.getElementById('searchInput').value.toLowerCase();
                 this.renderItems();
             },
 
             getFilteredItems() {
-                const filter = document.getElementById('dateFilter').value;
+                let filtered = this.data;
+
+                // Type filter
+                if (this.currentFilter.type !== 'all') {
+                    filtered = filtered.filter(item => item.type === this.currentFilter.type);
+                }
+
+                // Date filter
                 const now = new Date();
                 const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
                 
-                return this.data.filter(item => {
-                    const itemDate = new Date(item.timestamp);
-                    
-                    switch(filter) {
-                        case 'today':
-                            return itemDate >= today;
-                        case 'yesterday':
-                            const yesterday = new Date(today);
-                            yesterday.setDate(yesterday.getDate() - 1);
-                            return itemDate >= yesterday && itemDate < today;
-                        case 'week':
-                            const weekAgo = new Date(today);
-                            weekAgo.setDate(weekAgo.getDate() - 7);
-                            return itemDate >= weekAgo;
-                        case 'month':
-                            const monthAgo = new Date(today);
-                            monthAgo.setMonth(monthAgo.getMonth() - 1);
-                            return itemDate >= monthAgo;
-                        case 'all':
-                        default:
-                            return true;
-                    }
-                });
+                if (this.currentFilter.date !== 'all') {
+                    filtered = filtered.filter(item => {
+                        const itemDate = new Date(item.timestamp);
+                        
+                        switch(this.currentFilter.date) {
+                            case 'today':
+                                return itemDate >= today;
+                            case 'yesterday':
+                                const yesterday = new Date(today);
+                                yesterday.setDate(yesterday.getDate() - 1);
+                                return itemDate >= yesterday && itemDate < today;
+                            case 'week':
+                                const weekAgo = new Date(today);
+                                weekAgo.setDate(weekAgo.getDate() - 7);
+                                return itemDate >= weekAgo;
+                            case 'month':
+                                const monthAgo = new Date(today);
+                                monthAgo.setMonth(monthAgo.getMonth() - 1);
+                                return itemDate >= monthAgo;
+                            default:
+                                return true;
+                        }
+                    });
+                }
+
+                // Search filter
+                if (this.currentFilter.search) {
+                    filtered = filtered.filter(item => 
+                        item.content.toLowerCase().includes(this.currentFilter.search)
+                    );
+                }
+
+                return filtered;
             },
 
             renderItems() {
@@ -891,15 +1035,22 @@
 
                 if (items.length === 0) {
                     container.innerHTML = `
-                        <div class="empty-state">
-                            <div class="empty-state-icon">📝</div>
-                            <p>No entries yet. Click the buttons above to add your first entry!</p>
+                        <div class="empty-state" style="grid-column: 1 / -1;">
+                            <div class="empty-icon">📝</div>
+                            <p>No entries found. Start tracking your day!</p>
                         </div>
                     `;
                     return;
                 }
 
                 container.innerHTML = items.map(item => {
+                    const typeIcons = {
+                        tasks: 'check_circle',
+                        time: 'schedule',
+                        achievements: 'emoji_events',
+                        thoughts: 'lightbulb'
+                    };
+
                     const typeLabels = {
                         tasks: 'Task',
                         time: 'Time Log',
@@ -914,39 +1065,86 @@
 
                     const date = new Date(item.timestamp).toLocaleDateString();
 
-                    let meta = `<span>${date} at ${time}</span>`;
+                    let statusBadge = '';
                     if (item.status) {
-                        meta += `<span>Status: ${item.status}</span>`;
+                        statusBadge = `<span class="status-badge status-${item.status}">${item.status.replace('-', ' ')}</span>`;
                     }
+
+                    let timeBadge = '';
                     if (item.timeSpent) {
-                        meta += `<span>Time: ${item.timeSpent}h</span>`;
+                        timeBadge = `<span class="item-meta-item"><span class="material-icons" style="font-size: 14px;">schedule</span>${item.timeSpent}h</span>`;
                     }
 
                     return `
-                        <div class="item-card ${item.type}">
+                        <div class="item-card ${item.type}" onclick="app.openModal('${item.type}', ${item.id})">
                             <div class="item-header">
-                                <span class="item-type">${typeLabels[item.type]}</span>
-                                <button class="delete-btn" onclick="app.deleteItem(${item.id})">Delete</button>
+                                <span class="item-type-badge">
+                                    <span class="material-icons" style="font-size: 14px;">${typeIcons[item.type]}</span>
+                                    ${typeLabels[item.type]}
+                                </span>
+                                <div class="item-actions" onclick="event.stopPropagation()">
+                                    <button class="item-action-btn" onclick="app.openModal('${item.type}', ${item.id})" title="Edit">
+                                        <span class="material-icons" style="font-size: 18px;">edit</span>
+                                    </button>
+                                    <button class="item-action-btn" onclick="app.deleteItem(${item.id})" title="Delete">
+                                        <span class="material-icons" style="font-size: 18px;">delete</span>
+                                    </button>
+                                </div>
                             </div>
                             <div class="item-content">${this.escapeHtml(item.content)}</div>
-                            <div class="item-meta">${meta}</div>
+                            <div class="item-meta">
+                                <span class="item-meta-item">
+                                    <span class="material-icons" style="font-size: 14px;">calendar_today</span>
+                                    ${date}
+                                </span>
+                                <span class="item-meta-item">
+                                    <span class="material-icons" style="font-size: 14px;">access_time</span>
+                                    ${time}
+                                </span>
+                                ${timeBadge}
+                            </div>
+                            ${statusBadge ? `<div style="margin-top: 0.5rem;">${statusBadge}</div>` : ''}
                         </div>
                     `;
                 }).join('');
+            },
+
+            exportToCSV() {
+                const items = this.data;
+                if (items.length === 0) {
+                    alert('No data to export');
+                    return;
+                }
+
+                const headers = ['Type', 'Content', 'Date', 'Time', 'Status', 'Time Spent', 'Created At'];
+                const rows = items.map(item => {
+                    const date = new Date(item.timestamp).toLocaleDateString();
+                    const time = new Date(item.timestamp).toLocaleTimeString();
+                    return [
+                        item.type,
+                        `"${item.content.replace(/"/g, '""')}"`,
+                        date,
+                        time,
+                        item.status || '',
+                        item.timeSpent || '',
+                        item.timestamp
+                    ];
+                });
+
+                const csv = [headers, ...rows].map(row => row.join(',')).join('\n');
+                const blob = new Blob([csv], { type: 'text/csv' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `day-tracker-${new Date().toISOString().split('T')[0]}.csv`;
+                a.click();
+                URL.revokeObjectURL(url);
             },
 
             escapeHtml(text) {
                 const div = document.createElement('div');
                 div.textContent = text;
                 return div.innerHTML;
-            },
-
-            setStatus(text) {
-                document.getElementById('statusText').textContent = text;
-            },
-
-            setSyncStatus(text) {
-                document.getElementById('syncText').textContent = text;
             },
 
             showError(elementId, message) {
@@ -968,19 +1166,23 @@
 
         document.addEventListener('DOMContentLoaded', () => app.init());
 
-        document.getElementById('addModal').addEventListener('click', (e) => {
-            if (e.target.id === 'addModal') {
+        // Close modal when clicking outside
+        document.getElementById('itemModal').addEventListener('click', (e) => {
+            if (e.target.id === 'itemModal') {
                 app.closeModal();
             }
         });
 
         // Enter key to login
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('password').addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    app.login();
-                }
-            });
+            const passwordInput = document.getElementById('password');
+            if (passwordInput) {
+                passwordInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        app.login();
+                    }
+                });
+            }
         });
     </script>
 </body>
