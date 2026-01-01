@@ -848,7 +848,7 @@
                 
                 for (const repoInfo of possibleRepos) {
                     try {
-                        const url = `https://api.github.com/repos/${repoInfo.owner}/${repoInfo.repo}/contents/config.enc`;
+                        const url = `https://api.github.com/repos/${repoInfo.owner}/${repoInfo.repo}/config.enc`;
                         
                         const response = await fetch(url, {
                             headers: {
@@ -899,7 +899,7 @@
                     const encrypted = CryptoJS.AES.encrypt(jsonConfig, this.config.password).toString();
                     const base64Content = btoa(encrypted);
 
-                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/config.enc`;
+                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/config.enc`;
                     
                     const body = {
                         message: 'Save encrypted configuration',
@@ -936,7 +936,7 @@
             async loadData() {
                 try {
                     this.setStatus('Loading data...');
-                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/data.enc`;
+                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/data.enc`;
                     
                     const response = await fetch(url, {
                         headers: {
@@ -986,7 +986,7 @@
                     const encrypted = CryptoJS.AES.encrypt(jsonData, this.config.password).toString();
                     const base64Content = btoa(encrypted);
 
-                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/data.enc`;
+                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/data.enc`;
                     
                     const body = {
                         message: `Update data - ${new Date().toISOString()}`,
