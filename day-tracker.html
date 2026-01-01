@@ -838,10 +838,13 @@
             },
 
             async loadConfigFromGithub(password) {
-                // IMPORTANT: Replace 'YOUR_GITHUB_USERNAME' with your actual GitHub username
-                // This allows the app to find your encrypted config file
+                // Auto-detect GitHub username from current page URL
+                // e.g., https://manikandan-ravikiran.github.io/... -> manikandan-ravikiran
+                const hostname = window.location.hostname;
+                const username = hostname.split('.')[0]; // Gets 'manikandan-ravikiran' from 'manikandan-ravikiran.github.io'
+                
                 const possibleRepos = [
-                    { owner: 'manikandan-ravikiran', repo: 'day-tracker-data' }
+                    { owner: username, repo: 'day-tracker-data' }
                 ];
 
                 let configLoaded = false;
@@ -853,12 +856,19 @@
                         
                         const response = await fetch(apiUrl, {
                             headers: {
-                                'Accept': 'application/vnd.github.v3+json'
+                                'Accept': 'application/vnd.github.v3+json',
+                                'Cache-Control': 'no-cache'
                             }
                         });
 
-                        if (response.status === 404) continue;
-                        if (!response.ok) continue;
+                        if (response.status === 404) {
+                            console.log(`Config not found at ${apiUrl}`);
+                            continue;
+                        }
+                        if (!response.ok) {
+                            console.log(`Request failed: ${response.status} ${response.statusText}`);
+                            continue;
+                        }
 
                         const fileData = await response.json();
                         this.configSha = fileData.sha;
