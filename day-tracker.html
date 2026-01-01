@@ -848,31 +848,23 @@
                 
                 for (const repoInfo of possibleRepos) {
                     try {
-                        // Use raw.githubusercontent.com to avoid CORS issues when reading
-                        const rawUrl = `https://raw.githubusercontent.com/${repoInfo.owner}/${repoInfo.repo}/main/config.enc`;
+                        // Use GitHub API directly - no caching issues
+                        const apiUrl = `https://api.github.com/repos/${repoInfo.owner}/${repoInfo.repo}/contents/config.enc`;
                         
-                        let response = await fetch(rawUrl);
-                        
-                        // If main branch doesn't exist, try master
-                        if (response.status === 404) {
-                            const masterUrl = `https://raw.githubusercontent.com/${repoInfo.owner}/${repoInfo.repo}/master/config.enc`;
-                            response = await fetch(masterUrl);
-                        }
+                        const response = await fetch(apiUrl, {
+                            headers: {
+                                'Accept': 'application/vnd.github.v3+json'
+                            }
+                        });
 
                         if (response.status === 404) continue;
                         if (!response.ok) continue;
 
-                        // For raw content, we need to get the SHA from the API
-                        const apiUrl = `https://api.github.com/repos/${repoInfo.owner}/${repoInfo.repo}/contents/config.enc`;
-                        const apiResponse = await fetch(apiUrl);
-                        if (apiResponse.ok) {
-                            const apiData = await apiResponse.json();
-                            this.configSha = apiData.sha;
-                        }
+                        const fileData = await response.json();
+                        this.configSha = fileData.sha;
 
-                        const encryptedContent = await response.text();
-                        
-                        // Decrypt the config
+                        // Decrypt the config - GitHub API returns base64 encoded content
+                        const encryptedContent = atob(fileData.content.replace(/\n/g, ''));
                         const decrypted = CryptoJS.AES.decrypt(encryptedContent, password);
                         const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
 
