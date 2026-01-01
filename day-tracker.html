@@ -118,6 +118,17 @@
             box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.1);
         }
 
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+        }
+
         .btn {
             padding: 0.75rem 1.5rem;
             background: var(--accent-thoughts);
@@ -136,6 +147,12 @@
             box-shadow: 0 4px 12px rgba(167, 139, 250, 0.3);
         }
 
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
         .btn-secondary {
             background: var(--bg-tertiary);
             color: var(--text-primary);
@@ -145,6 +162,20 @@
         .btn-secondary:hover {
             background: var(--hover);
             box-shadow: none;
+        }
+
+        .btn-link {
+            background: none;
+            color: var(--accent-thoughts);
+            padding: 0;
+            text-decoration: underline;
+            font-weight: 400;
+        }
+
+        .btn-link:hover {
+            transform: none;
+            box-shadow: none;
+            opacity: 0.8;
         }
 
         .status-bar {
@@ -300,6 +331,7 @@
             color: var(--text-primary);
             margin-bottom: 0.5rem;
             line-height: 1.6;
+            white-space: pre-wrap;
         }
 
         .item-meta {
@@ -463,6 +495,12 @@
             margin-top: 0.5rem;
         }
 
+        .warning-text {
+            font-size: 0.85rem;
+            color: var(--accent-achievements);
+            margin-top: 0.5rem;
+        }
+
         .date-filter {
             display: flex;
             gap: 1rem;
@@ -480,9 +518,49 @@
             cursor: pointer;
         }
 
+        .tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .tab {
+            padding: 0.75rem 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-tertiary);
+            cursor: pointer;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            color: var(--accent-thoughts);
+            border-bottom-color: var(--accent-thoughts);
+        }
+
+        .tab:hover {
+            color: var(--text-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         @media (max-width: 768px) {
             .add-buttons {
                 grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -497,37 +575,63 @@
         <!-- Setup Screen -->
         <div id="setupScreen" class="setup-container">
             <div class="setup-card">
-                <h2>Setup Your Tracker</h2>
+                <h2>Welcome to Day Tracker</h2>
                 <div id="setupError" class="error" style="display: none;"></div>
                 <div id="setupSuccess" class="success" style="display: none;"></div>
-                
-                <div class="form-group">
-                    <label for="githubToken">GitHub Personal Access Token</label>
-                    <input type="password" id="githubToken" placeholder="ghp_...">
-                    <div class="help-text">
-                        Create a token at: Settings → Developer settings → Personal access tokens → Tokens (classic)<br>
-                        Required scope: <strong>repo</strong> (full control of private repositories)
+
+                <div class="tabs">
+                    <button class="tab active" onclick="app.switchTab('unlock')">Unlock with Password</button>
+                    <button class="tab" onclick="app.switchTab('firstTime')">First Time Setup</button>
+                </div>
+
+                <!-- Unlock Tab (for existing users) -->
+                <div id="unlockTab" class="tab-content active">
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                        Enter your password to unlock your tracker
+                    </p>
+
+                    <div class="form-group">
+                        <label for="unlockPassword">Password</label>
+                        <input type="password" id="unlockPassword" placeholder="Your encryption password">
                     </div>
+
+                    <button class="btn" onclick="app.unlockWithPassword()">Unlock Tracker</button>
                 </div>
 
-                <div class="form-group">
-                    <label for="repoOwner">Repository Owner</label>
-                    <input type="text" id="repoOwner" placeholder="your-username">
-                </div>
+                <!-- First Time Setup Tab -->
+                <div id="firstTimeTab" class="tab-content">
+                    <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">
+                        Set up your tracker for the first time. You'll need a GitHub Personal Access Token.
+                    </p>
 
-                <div class="form-group">
-                    <label for="repoName">Repository Name</label>
-                    <input type="text" id="repoName" placeholder="day-tracker-data">
-                    <div class="help-text">This repo should exist and be private</div>
-                </div>
+                    <div class="form-group">
+                        <label for="githubToken">GitHub Personal Access Token</label>
+                        <input type="password" id="githubToken" placeholder="ghp_...">
+                        <div class="help-text">
+                            Create at: GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)<br>
+                            Required scope: <strong>repo</strong> (full control of private repositories)
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="encryptionPassword">Encryption Password</label>
-                    <input type="password" id="encryptionPassword" placeholder="Choose a strong password">
-                    <div class="help-text">⚠️ Don't lose this! Your data cannot be recovered without it.</div>
-                </div>
+                    <div class="form-group">
+                        <label for="repoOwner">GitHub Username</label>
+                        <input type="text" id="repoOwner" placeholder="your-username">
+                    </div>
 
-                <button class="btn" onclick="app.saveConfig()">Save & Start</button>
+                    <div class="form-group">
+                        <label for="repoName">Repository Name</label>
+                        <input type="text" id="repoName" placeholder="day-tracker-data">
+                        <div class="help-text">Create a new private repository with this name</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="setupPassword">Encryption Password</label>
+                        <input type="password" id="setupPassword" placeholder="Choose a strong password">
+                        <div class="warning-text">⚠️ Remember this password! You'll use it on all devices.</div>
+                    </div>
+
+                    <button class="btn" onclick="app.firstTimeSetup()">Setup & Encrypt Token</button>
+                </div>
             </div>
         </div>
 
@@ -624,17 +728,40 @@
             config: null,
             data: [],
             currentType: null,
-            githubSha: null,
+            dataSha: null,
+            configSha: null,
 
             async init() {
-                // Load config from localStorage
-                const savedConfig = localStorage.getItem('dayTrackerConfig');
-                if (savedConfig) {
-                    this.config = JSON.parse(savedConfig);
-                    await this.loadData();
-                    this.showMainScreen();
+                // Check if user has password cached locally
+                const cachedPassword = sessionStorage.getItem('dayTrackerPassword');
+                if (cachedPassword) {
+                    try {
+                        await this.loadConfigFromGithub(cachedPassword);
+                        await this.loadData();
+                        this.showMainScreen();
+                    } catch (error) {
+                        console.error('Failed to auto-unlock:', error);
+                        sessionStorage.removeItem('dayTrackerPassword');
+                        this.showSetupScreen();
+                    }
                 } else {
                     this.showSetupScreen();
+                }
+            },
+
+            switchTab(tab) {
+                const tabs = document.querySelectorAll('.tab');
+                const contents = document.querySelectorAll('.tab-content');
+                
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                if (tab === 'unlock') {
+                    document.querySelector('.tab:first-child').classList.add('active');
+                    document.getElementById('unlockTab').classList.add('active');
+                } else {
+                    document.querySelector('.tab:last-child').classList.add('active');
+                    document.getElementById('firstTimeTab').classList.add('active');
                 }
             },
 
@@ -649,25 +776,161 @@
                 this.renderItems();
             },
 
-            saveConfig() {
+            async unlockWithPassword() {
+                const password = document.getElementById('unlockPassword').value;
+                
+                if (!password) {
+                    this.showError('setupError', 'Please enter your password');
+                    return;
+                }
+
+                try {
+                    this.showSuccess('setupSuccess', 'Unlocking...');
+                    
+                    // Try to load encrypted config from GitHub
+                    await this.loadConfigFromGithub(password);
+                    
+                    // Cache password for this session
+                    sessionStorage.setItem('dayTrackerPassword', password);
+                    
+                    // Load data
+                    await this.loadData();
+                    
+                    this.showSuccess('setupSuccess', 'Unlocked successfully!');
+                    setTimeout(() => this.showMainScreen(), 500);
+                } catch (error) {
+                    console.error('Unlock error:', error);
+                    this.showError('setupError', 'Failed to unlock: ' + error.message);
+                }
+            },
+
+            async firstTimeSetup() {
                 const token = document.getElementById('githubToken').value;
                 const owner = document.getElementById('repoOwner').value;
                 const repo = document.getElementById('repoName').value;
-                const password = document.getElementById('encryptionPassword').value;
+                const password = document.getElementById('setupPassword').value;
 
                 if (!token || !owner || !repo || !password) {
                     this.showError('setupError', 'Please fill in all fields');
                     return;
                 }
 
-                this.config = { token, owner, repo, password };
-                localStorage.setItem('dayTrackerConfig', JSON.stringify(this.config));
+                try {
+                    this.showSuccess('setupSuccess', 'Encrypting and storing configuration...');
+                    
+                    this.config = { token, owner, repo, password };
+                    
+                    // Encrypt and save config to GitHub
+                    await this.saveConfigToGithub();
+                    
+                    // Cache password for this session
+                    sessionStorage.setItem('dayTrackerPassword', password);
+                    
+                    this.showSuccess('setupSuccess', 'Setup complete! Loading tracker...');
+                    setTimeout(() => {
+                        this.data = [];
+                        this.showMainScreen();
+                    }, 1000);
+                } catch (error) {
+                    console.error('Setup error:', error);
+                    this.showError('setupError', 'Setup failed: ' + error.message);
+                }
+            },
+
+            async loadConfigFromGithub(password) {
+                // IMPORTANT: Replace 'YOUR_GITHUB_USERNAME' with your actual GitHub username
+                // This allows the app to find your encrypted config file
+                const possibleRepos = [
+                    { owner: 'manikandan-ravikiran', repo: 'day-tracker-data' }
+                ];
+
+                let configLoaded = false;
                 
-                this.showSuccess('setupSuccess', 'Configuration saved! Loading your data...');
-                setTimeout(() => {
-                    this.loadData();
-                    this.showMainScreen();
-                }, 1000);
+                for (const repoInfo of possibleRepos) {
+                    try {
+                        const url = `https://api.github.com/repos/${repoInfo.owner}/${repoInfo.repo}/contents/config.enc`;
+                        
+                        const response = await fetch(url, {
+                            headers: {
+                                'Accept': 'application/vnd.github.v3+json'
+                            }
+                        });
+
+                        if (response.status === 404) continue;
+                        if (!response.ok) continue;
+
+                        const fileData = await response.json();
+                        this.configSha = fileData.sha;
+
+                        // Decrypt the config
+                        const encryptedContent = atob(fileData.content);
+                        const decrypted = CryptoJS.AES.decrypt(encryptedContent, password);
+                        const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
+
+                        if (!decryptedText) {
+                            throw new Error('Wrong password');
+                        }
+
+                        this.config = JSON.parse(decryptedText);
+                        this.config.password = password; // Store password in memory
+                        configLoaded = true;
+                        break;
+                    } catch (error) {
+                        console.error(`Failed to load from ${repoInfo.owner}/${repoInfo.repo}:`, error);
+                    }
+                }
+
+                if (!configLoaded) {
+                    throw new Error('Could not find or decrypt configuration. Wrong password or setup not completed.');
+                }
+            },
+
+            async saveConfigToGithub() {
+                try {
+                    // Create a config object without the password (we'll use it to encrypt)
+                    const configToSave = {
+                        token: this.config.token,
+                        owner: this.config.owner,
+                        repo: this.config.repo
+                    };
+
+                    // Encrypt the config with the password
+                    const jsonConfig = JSON.stringify(configToSave);
+                    const encrypted = CryptoJS.AES.encrypt(jsonConfig, this.config.password).toString();
+                    const base64Content = btoa(encrypted);
+
+                    const url = `https://api.github.com/repos/${this.config.owner}/${this.config.repo}/contents/config.enc`;
+                    
+                    const body = {
+                        message: 'Save encrypted configuration',
+                        content: base64Content
+                    };
+
+                    if (this.configSha) {
+                        body.sha = this.configSha;
+                    }
+
+                    const response = await fetch(url, {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `token ${this.config.token}`,
+                            'Accept': 'application/vnd.github.v3+json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(body)
+                    });
+
+                    if (!response.ok) {
+                        const error = await response.json();
+                        throw new Error(error.message || 'Failed to save configuration');
+                    }
+
+                    const result = await response.json();
+                    this.configSha = result.content.sha;
+                } catch (error) {
+                    console.error('Config save error:', error);
+                    throw error;
+                }
             },
 
             async loadData() {
@@ -683,9 +946,8 @@
                     });
 
                     if (response.status === 404) {
-                        // File doesn't exist yet, start fresh
                         this.data = [];
-                        this.githubSha = null;
+                        this.dataSha = null;
                         this.setStatus('Ready - No existing data');
                         return;
                     }
@@ -695,7 +957,7 @@
                     }
 
                     const fileData = await response.json();
-                    this.githubSha = fileData.sha;
+                    this.dataSha = fileData.sha;
 
                     // Decrypt the data
                     const encryptedContent = atob(fileData.content);
@@ -703,7 +965,7 @@
                     const decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
 
                     if (!decryptedText) {
-                        throw new Error('Decryption failed - wrong password?');
+                        throw new Error('Decryption failed');
                     }
 
                     this.data = JSON.parse(decryptedText);
@@ -720,7 +982,6 @@
                 try {
                     this.setSyncStatus('Syncing...');
                     
-                    // Encrypt the data
                     const jsonData = JSON.stringify(this.data);
                     const encrypted = CryptoJS.AES.encrypt(jsonData, this.config.password).toString();
                     const base64Content = btoa(encrypted);
@@ -732,8 +993,8 @@
                         content: base64Content
                     };
 
-                    if (this.githubSha) {
-                        body.sha = this.githubSha;
+                    if (this.dataSha) {
+                        body.sha = this.dataSha;
                     }
 
                     const response = await fetch(url, {
@@ -752,7 +1013,7 @@
                     }
 
                     const result = await response.json();
-                    this.githubSha = result.content.sha;
+                    this.dataSha = result.content.sha;
                     
                     this.setSyncStatus('Synced');
                     this.setStatus('Data saved successfully');
@@ -770,12 +1031,10 @@
                 const taskGroup = document.getElementById('taskStatusGroup');
                 const timeGroup = document.getElementById('timeLogsGroup');
 
-                // Reset form
                 document.getElementById('itemContent').value = '';
                 taskGroup.style.display = 'none';
                 timeGroup.style.display = 'none';
 
-                // Set title and show relevant fields
                 const titles = {
                     tasks: 'Add Task',
                     time: 'Add Time Log',
@@ -818,7 +1077,7 @@
                     item.timeSpent = parseFloat(document.getElementById('timeSpent').value) || 0;
                 }
 
-                this.data.unshift(item); // Add to beginning
+                this.data.unshift(item);
                 await this.saveData();
                 this.renderItems();
                 this.closeModal();
@@ -945,8 +1204,8 @@
             },
 
             logout() {
-                if (confirm('Are you sure you want to logout? Your config will be cleared from this device.')) {
-                    localStorage.removeItem('dayTrackerConfig');
+                if (confirm('Are you sure you want to logout?')) {
+                    sessionStorage.removeItem('dayTrackerPassword');
                     this.config = null;
                     this.data = [];
                     this.showSetupScreen();
@@ -954,10 +1213,8 @@
             }
         };
 
-        // Initialize app when page loads
         document.addEventListener('DOMContentLoaded', () => app.init());
 
-        // Close modal when clicking outside
         document.getElementById('addModal').addEventListener('click', (e) => {
             if (e.target.id === 'addModal') {
                 app.closeModal();
