@@ -6,12 +6,52 @@ redirect_from:
   - /about.html
 ---
 
-**Manikandan Ravikiran** is an influential *(to the select few around him, and occasionally to Reviewer 2)* AI researcher/engineer whose work has wandered across machine learning, large language models, multilingual and educational NLP, trustworthy AI, reasoning systems, efficient learning, computer vision, and the occasional research problem that probably should have been left alone. Over the years, his work has included **AI for Advanced Driver Assistance Systems (ADAS)**, scalable machine-learning systems, model compression, multilingual NLP, educational AI, LLM evaluation, semantic completeness, explanation quality and fairness, and mathematically grounded approaches to efficient learning and reasoning. He has submitted his doctoral thesis in **Computer Science and Engineering at IIT Mandi**, advised by **Prof. Rohit Saluja** and **Prof. Arnav Bhavsar**. The thesis is finished; the defense is pending and is currently operating on the well-established academic principle that time is merely a suggestion.
+**Manikandan Ravikiran** is an influential *(to the select few around him, and occasionally to Reviewer 2)* AI researcher/engineer whose work has wandered across machine learning, large language models, multilingual and educational NLP, trustworthy AI, reasoning systems, efficient learning, computer vision, and several research problems that, in retrospect, probably should have been left unsupervised.
 
-After spending an unreasonable number of years thinking about language models — and participating in the recurring social experiment otherwise known as **ACL/ARR reviewing** — Manikandan is currently taking a **hiatus from LLM and generative-AI research and wandering around in search of meaning of life beyond leaderboards, ablations, rebuttals, and reviewer confidence scores**. He is currently **not pursuing new LLM collaborations, research engagements, benchmarking exercises, consulting projects, “quick experiments,” or meetings that could apparently have been emails**. If your message contains the phrases **LLM**, **RAG**, **agentic AI**, **prompt engineering**, **evaluation framework**, **SOTA**, **benchmark**, or *“can we pick your brain?”*, there is a statistically significant probability that it will remain peacefully unread.
+Over the years, his work has included **AI for Advanced Driver Assistance Systems (ADAS)**, scalable machine-learning systems, model compression, multilingual NLP, educational AI, LLM evaluation, semantic completeness, explanation quality and fairness, and mathematically grounded approaches to efficient learning and reasoning. Some of these became papers. Some became patents. Some became rebuttals. A concerning number became all three.
 
-Requests beginning with *“we already have the idea, we just need someone to implement it”* may experience even stronger regularization. This website is mostly an **archive of old research, publications, projects, patents, academic adventures, and ideas that somehow survived long enough to become papers**. Some pages are current. Some are historical. Some probably need updating. Some have survived purely because deleting things from a personal website requires more motivation than writing another paper. **My linkedIn is dead, Twitter is still being mourned in its previous incarnation, and email is currently out with his girlfriend.** In other words, contacting me may require either remarkable persistence, improbable luck, or physically encountering me somewhere.
+He has submitted his doctoral thesis in **Computer Science and Engineering at IIT Mandi**, advised by **Prof. Rohit Saluja** and **Prof. Arnav Bhavsar**. The thesis is finished; the defense is pending and is currently operating on the well-established academic principle that **time is merely a suggestion**.
 
+After spending an unreasonable number of years thinking about language models — and repeatedly participating in the recurring social experiment otherwise known as **ACL/ARR reviewing** — Manikandan is currently taking a deliberate hiatus from LLM and generative-AI research to investigate a considerably harder open problem:
+
+**whether life contains anything beyond leaderboards, ablation tables, rebuttal deadlines, reviewer confidence scores, and GitHub repositories called `final_final_v7_fixed`.**
+
+Preliminary results are inconclusive.
+
+For the foreseeable future, he is **not pursuing new LLM collaborations, research engagements, benchmarking exercises, consulting projects, advisory roles, “quick experiments,” brainstorming calls, unpaid technical archaeology, or meetings that could have been emails**.
+
+Messages containing any of the following expressions may therefore undergo aggressive pruning: **LLM · RAG · Agentic AI · Prompt Engineering · Evaluation Framework · Benchmark · SOTA · Foundation Model · “Can we pick your brain?” · “Just 20 minutes” · “We already have the idea”**
+
+The last phrase is particularly dangerous when followed by:
+> *“…we just need someone to implement it.”*
+
+Such requests are automatically routed through a proprietary rejection architecture featuring **zero-shot filtering, adversarial regularization, and an exceptionally low recall objective**.
+
+This website is therefore best understood as an **archive** of old research, publications, projects, patents, academic adventures, experiments, mathematical detours, and ideas that somehow survived peer review long enough to acquire DOIs.
+
+Some pages are current.  
+Some are historical.  
+Some probably need updating.  
+Some contradict newer pages.  
+And some continue to exist solely because deleting things from a personal website requires more motivation than writing another paper.
+
+## Contact
+
+**LinkedIn is dead.**  
+**Twitter is still being mourned in its previous incarnation.**  
+**Email is currently out with his girlfriend and appears to be getting serious.**
+
+Consequently, contacting Manikandan may require one of the following:
+
+1. remarkable persistence,
+2. improbable luck,
+3. a genuinely interesting (to him) problem,
+4. physically encountering him somewhere (in foothills of himalayas),
+5. or successfully demonstrating that your proposed “15-minute chat” will, in accordance with the laws of physics, actually last 15 minutes.
+
+If you do manage to reach him, please use the opportunity responsibly.
+
+**He has already seen your benchmark.**
 
 ---
 
