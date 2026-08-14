@@ -12,7 +12,7 @@ Over the years, his work has included **AI for Advanced Driver Assistance System
 
 He has submitted his doctoral thesis in **Computer Science and Engineering at IIT Mandi**, advised by **Prof. Rohit Saluja** and **Prof. Arnav Bhavsar**. The thesis is finished; the defense is pending and is currently operating on the well-established academic principle that **time is merely a suggestion**.
 
-After spending an unreasonable number of years thinking about language models — and repeatedly participating in the recurring social experiment otherwise known as **ACL/ARR reviewing** — Manikandan is currently taking a deliberate hiatus from LLM and generative-AI research to investigate a considerably harder open problem:
+After spending an unreasonable number of years thinking about language models — and repeatedly participating in the recurring social experiment otherwise known as **ACL/ARR reviewing** — Manikandan is currently taking a long hiatus from Research, LLM and generative-AI research to investigate a considerably harder open problem:
 
 **whether life contains anything beyond leaderboards, ablation tables, rebuttal deadlines, reviewer confidence scores, and GitHub repositories called `final_final_v7_fixed`.**
 
