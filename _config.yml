@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Manikandan Ravikiran"
 title_separator          : "-"
 name                     : &name "Manikandan Ravikiran"
-description              : &description "Research Engineer in Deep Learning"
+description              : &description "Research Scientist/ML Engineering"
 url                      : https://manikandan-ravikiran.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "manikandan-ravikiran/manikandan-ravikiran.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Manikandan Ravikiran"
   avatar           : "my_photo_latest.jpg"
-  bio              : "Lead Research Scientist (AI)"
+  bio              : "Researcher/ML Engineer"
   location         : "Bangalore"
   employer         :
   googlescholar    : "https://scholar.google.co.in/citations?user=wY_iqNwAAAAJ&hl=en"
