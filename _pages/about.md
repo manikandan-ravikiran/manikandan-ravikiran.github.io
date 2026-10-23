@@ -7,32 +7,31 @@ redirect_from:
   - /about.html
 ---
 
-I am **Manikandan Ravikiran**, an AI researcher and engineer working across **natural language processing, computer vision, and time-series modeling**, with applications in **robotics and autonomous systems**. I develop methods, datasets, and evaluation tools for learning from imperfect data and understanding where models succeed or fail.
+## About Me
 
-My research connects three questions: **How can models learn with less data and computation? How do they behave when information is noisy or incomplete? And how can we make their predictions easier to evaluate and explain?** These questions have taken my work from efficient visual recognition and multilingual NLP to educational AI, language-model reliability, forecasting, and anomaly detection. 
+I am Manikandan Ravikiran, working across language, vision, time series, and robotics. Previously, I was a Research Scientist and Lead Researcher at Thoughtworks AI Labs, following nearly a decade at Hitachi R&D. Across these roles, I have been drawn to a common challenge: building models that learn from limited or imperfect information, and understanding when their predictions deserve our trust.
 
-Previously, I was a **Research Scientist and Lead Researcher at Thoughtworks AI Labs**, following nearly a decade in applied AI research at **Hitachi R&D**.
+My research centers on representation learning, structured reasoning, and the reliability of AI systems. I have developed methods for understanding multilingual text, assessing educational content, and identifying information lost in generated summaries, alongside work on efficient object recognition, tracking, and multimodal document understanding. More recently, I have been investigating forecasting and anomaly detection, with a particular interest in explaining temporal predictions, as well as robotic perception and planning through haptic sensing, few-shot learning, and language-guided interaction. Across these problems, I aim to develop methods whose behavior can be understood, evaluated rigorously, and translated into practical systems.
 
 [Google Scholar](https://scholar.google.com/citations?user=wY_iqNwAAAAJ&hl=en) · [GitHub](https://github.com/manikandan-ravikiran) · [Email](mailto:manikandan.ravikiran@gmail.com)
 
-## Research directions
 
-### Language, reasoning, and educational AI
+## Collaborators
 
-My NLP work spans **low-resource and code-mixed languages, educational assessment, semantic completeness, and model evaluation**. I have contributed datasets and methods for identifying offensive spans, understanding informal language, and estimating question difficulty in Indic languages. I also study the reliability of generated and evaluated text: what summaries omit, how models respond to misleading evidence, and when automated assessment should expose uncertainty. My recent work also explores structured inference, prototype representations, and inference-time control for language tasks.
+Research has been a collaborative effort throughout my career. I have had the opportunity to work with researchers across universities and industrial laboratories, including:
 
+- **Rohit Saluja and Arnav Bhavsar** — IIT Mandi; my doctoral advisors.
+- **Martin Klinkigt** — Kyocera Innovation Labs, Japan.
+- **Shinichi Satoh and colleagues** — National Institute of Informatics, Japan.
+- **Andreas Dengel, Sheraz Ahmed, and Jorn Hees** — DFKI, Germany.
+- **Snehanshu Saha** — APP CAIR, BITS Pilani.
+- **Vinay P. Namboodiri** — University of Bath (Prev. IIT Kanpur).
+- **Bharathi Raja Chakravarthi** — National University of Ireland, Galway.
+- **Gaurav Sharma** — IIT Kanpur, INRIA-THOTH, and NEC Media Analytics, USA.
+- **Anand Kumar Madasamy** — NIT Karnataka, Surathkal.
+- **Sangeetha Sivanesan** — NIT Tiruchirappalli.
+- **Ratnavel Rajalakshmi** — VIT Vellore.
 
-### Vision and multimodal learning
-
-My computer-vision research includes **model compression, object detection, tracking, pedestrian attribute recognition, and visual document understanding**. Representative contributions include **DeepSORT analysis for low-frame-rate tracking**, and **Hi-GoTE and Dynamic Kernel Tuning (DKT) for pedestrian attribute recognition**. My work emphasizes efficient learning and robust perception for mobility, surveillance, and industrial applications. More recent work connects visual and textual evidence to understand difficult documents, including low-legibility handwritten answers and noisy scene text. Across these settings, I am interested in generalization under limited data, imperfect observations, and deployment constraints.
-
-### Forecasting, anomaly detection, and interpretability
-
-My temporal-modeling work spans **forecasting, multivariate anomaly detection, and explanations of model predictions**. I study how historical observations and internal representations influence forecasts, and how reconstruction and training strategies affect anomaly detection. This direction builds on earlier work in imputation and temporal learning, alongside research on forecast reliability, memory-augmented prediction, and reproducible evaluation.
-
-### Robotics and autonomous systems
-
-My robotics research focuses on **perception, learning, and decision-making for intelligent robots and autonomous systems**. My interests span haptic and multimodal perception, data-efficient learning for manipulation, language-guided autonomy, task and mission planning, and human–robot interaction. I study how sensory evidence and human instructions can support useful representations, structured reasoning, and executable actions. I am particularly interested in how robots can reason under incomplete observations and operational constraints, acquire task-relevant knowledge through interaction, and make their decisions understandable to human operators.
 
 ## Selected publications and preprints
 
@@ -46,19 +45,15 @@ A selection of established contributions and recent work. Follow the linked reco
 - **[Inference-Time Soft Preference Shaping for Budgeted Abstractive Summarization](https://conf.papercept.net/conferences/conferences/SMC26/program/SMC26_ContentListWeb_4.html)** 
   Manikandan Ravikiran (2026). In *Proceedings of the 2026 IEEE International Conference on Systems, Man, and Cybernetics (SMC)*, Bellevue, Washington, USA, October 4–7, 2026.
 
-- **[DOSA: Dravidian Code-Mixed Offensive Span Identification Dataset](https://aclanthology.org/2021.dravidianlangtech-1.2/)**  
-  Manikandan Ravikiran and Subbiah Annamalai. **DravidianLangTech at EACL 2021.**  
-  A dataset for locating offensive spans in Tamil-English and Kannada-English code-mixed text.
-
 - **[TEEMIL: Towards Educational MCQ Difficulty Estimation in Indic Languages](https://aclanthology.org/2025.coling-main.142/)**  
-  Manikandan Ravikiran, Siddharth Vohra, Rajat Verma, Rohit Saluja, Arnav Bhavsar. **COLING 2025.**  
+  Manikandan Ravikiran, Siddharth Vohra, Rajat Verma, Rohit Saluja, Arnav Bhavsar. *COLING 2025.*
   Datasets and baselines for estimating question difficulty in Hindi and Kannada.
 
 - **[DIFFICODE: A Dataset and Graph Spectral Framework for Programming MCQ Difficulty Estimation](https://doi.org/10.1109/ACCESS.2026.3670106)**  
-  Manikandan Ravikiran, Rakesh Prakash, Arnav Bhavsar, Rohit Saluja. **IEEE Access, 2026.**
+  Manikandan Ravikiran, Rakesh Prakash, Arnav Bhavsar, Rohit Saluja. *IEEE Access, 2026.*
 
 - **[Hi-SEMFLOW: Lie Algebra–Based Semantic Flow for Span-Level Informal Language Identification in Hindi](https://aclanthology.org/2026.chipsal-1.14/)**  
-  Manikandan Ravikiran, Tanmay Tiwari, Vibhu Gupta, Rohit Saluja. **CHiPSAL 2026.**
+  Manikandan Ravikiran, Tanmay Tiwari, Vibhu Gupta, Rohit Saluja. *CHiPSAL 2026.*
 
 - **[GISA: Gradual Information Selection Attention for MCQ Difficulty Estimation](https://link.springer.com/chapter/10.1007/978-3-031-98414-3_14)**  
   Manikandan Ravikiran, Tarun Sharma, Arnav Bhavsar, and Rohit Saluja (2025). In *Artificial Intelligence in Education: 26th International Conference, AIED 2025*, Proceedings, Part I, pp. 193–206. Springer.
@@ -66,13 +61,13 @@ A selection of established contributions and recent work. Follow the linked reco
 ### Vision and multimodal learning
 
 - **[Multi-Layer Pruning Framework for Compressing Single Shot MultiBox Detector](https://arxiv.org/abs/1811.08342)**  
-  Pravendra Singh, Manikandan R, Neeraj Matiyali, Vinay P. Namboodiri. **IEEE WACV 2019.**
+  Pravendra Singh, Manikandan R, Neeraj Matiyali, Vinay P. Namboodiri. *IEEE WACV 2019.*
 
 - **[Hi-GoTE: Hierarchical Group-Wise Temporal Ensembling for Semi-Supervised Pedestrian Attribute Recognition](https://ieeexplore.ieee.org/document/10459753/)**  
-  Manikandan Ravikiran, Soumen Biswas, Ananth Ganesh. **IEEE ICMLA 2023.**
+  Manikandan Ravikiran, Soumen Biswas, Ananth Ganesh. *IEEE ICMLA 2023.*
 
 - **[Structural Auxiliary Supervision for OCR of Low-Legibility Handwritten Answers](https://doi.org/10.1016/j.array.2026.101051)**  
-  Shrey Chandola, Manikandan Ravikiran, Rohit Saluja. **Array, 2026.**
+  Shrey Chandola, Manikandan Ravikiran, Rohit Saluja. *Array, 2026.*
 
 - **[DKT: A First Look at Dynamic Kernel Tuning for Pedestrian Attribute Recognition](https://ieeexplore.ieee.org/document/10825027)**  
   Rahul Mishra, Manikandan Ravikiran, Soumen Biswas, and Ananth Ganesh (2024). In *Proceedings of the 2024 IEEE International Conference on Big Data (BigData)*, pp. 5192–5200.
@@ -118,8 +113,7 @@ A selection of established contributions and recent work. Follow the linked reco
 
 ## Education
 
-- **Ph.D., Computer Science and Engineering — Indian Institute of Technology, Mandi**  
-  Thesis submitted; defense pending. Advised by **Prof. Rohit Saluja** and **Prof. Arnav Bhavsar**.
+- **Ph.D., Computer Science and Engineering — Indian Institute of Technology, Mandi**  Advised by *Prof. Rohit Saluja* and *Prof. Arnav Bhavsar* (Thesis under review)
 - **M.S., Computer Science — Georgia Institute of Technology**, 2022.
 - **B.E., Computer Science — Visvesvaraya Technological University**, 2015.
 
@@ -129,10 +123,10 @@ A selection of established contributions and recent work. Follow the linked reco
 - **Best Paper Runner-up — AIED 2025.**
 - **Best Paper — BHASHA Workshop, AACL-IJCNLP 2025.**
 
-I contribute to the research community through reviewing, workshop organization, teaching, and mentoring. My service includes ACL, EMNLP, AACL, EACL, COLING, LREC, and several vision and machine-learning venues. I have helped organize workshops on resource-constrained ML, Dravidian language technologies, and cross-modal learning, and contributed a tutorial on Legal AI at AACL-IJCNLP 2025.
+I contribute to the research community through reviewing, workshop organization, teaching, and mentoring. My service includes ACL, EMNLP, AACL, EACL, COLING, LREC, IEEE SMC, IEEE Bigdata, ACM WSDM, IEEE IROS and several other leading venues. I have helped organize workshops and tutorials on resource-constrained ML, Dravidian language technologies, and cross-modal learning, and Legal AI.
 
-My research has also led to multiple **granted patents** covering data-efficient object recognition, heterogeneous distillation, learning from noisy data, and inference scaling.
+My research has also led to plethora of **granted patents** covering data-efficient object recognition, heterogeneous distillation, learning from noisy data, and inference scaling.
 
 ## Contact
 
-For correspondence about my research, please email **[manikandan.ravikiran@gmail.com](mailto:manikandan.ravikiran@gmail.com)**. 
+For correspondence about my work, please email **[manikandan.ravikiran@gmail.com](mailto:manikandan.ravikiran@gmail.com)**. 
